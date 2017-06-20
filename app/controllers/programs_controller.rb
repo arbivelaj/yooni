@@ -6,6 +6,7 @@ class ProgramsController < ApplicationController
   end
 
   def search
+    query = {}
     if params[:search_value].nil?
       @programs = Program.search_modal(params[:subject], params[:level], params[:tuition].to_i)
     else
