@@ -4,4 +4,8 @@ class ProgramsController < ApplicationController
 
   def index
   end
+
+  def search
+    @programs = Program.search(params[:search_value])
+  end
 end

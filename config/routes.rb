@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   get 'universities/index'
 
+  get 'search', to: "programs#search", as: :search
+
   devise_for :users
   root to: 'pages#home'
   resources :programs
