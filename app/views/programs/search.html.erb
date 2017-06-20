@@ -1,4 +1,4 @@
-search.html.erb
+
 
 <ul>
   <% @programs.each do |program| %>
@@ -6,6 +6,7 @@ search.html.erb
     <li>
       <strong><%= program.title %></strong>
       <i><%= program.subject %></i>
+      <i><%= program.tuition %></i>
 
 
   <% end %>
