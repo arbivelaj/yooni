@@ -10,10 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170619154654) do
+ActiveRecord::Schema.define(version: 20170620101320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applications", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_applications_on_program_id", using: :btree
+    t.index ["user_id"], name: "index_applications_on_user_id", using: :btree
+  end
+
+  create_table "favourites", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_favourites_on_program_id", using: :btree
+    t.index ["user_id"], name: "index_favourites_on_user_id", using: :btree
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "ranking"
+    t.integer  "tuition"
+    t.string   "scholarship"
+    t.string   "level"
+    t.integer  "university_id"
+    t.string   "subject"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["university_id"], name: "index_programs_on_university_id", using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.integer  "program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_reviews_on_program_id", using: :btree
+    t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
+  end
+
+  create_table "universities", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "description"
+    t.string   "website"
+    t.string   "phone_number"
+    t.string   "contact"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,4 +84,11 @@ ActiveRecord::Schema.define(version: 20170619154654) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "applications", "programs"
+  add_foreign_key "applications", "users"
+  add_foreign_key "favourites", "programs"
+  add_foreign_key "favourites", "users"
+  add_foreign_key "programs", "universities"
+  add_foreign_key "reviews", "programs"
+  add_foreign_key "reviews", "users"
 end
