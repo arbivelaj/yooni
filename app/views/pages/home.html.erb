@@ -1,2 +1,16 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="container">
+  <div class="row">
+    <div col-xs-6 col-xs-offset-6>
+
+    <%= form_tag('/search', method: 'get') do  %>
+     <%= text_field_tag :search_value %>
+     <%= submit_tag 'search', class: "commit commit:hover" %>
+
+     <% end  %>
+
+</div>
+</div>
+</div>
