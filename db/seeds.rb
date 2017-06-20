@@ -75,7 +75,7 @@ management = Program.create(
   tuition: 20000,
   scholarship: "€ 1,181",
   level: "Master",
-  university_id: 2,
+  university: berlin,
   subject: "Management")
 
 management2 = Program.create(
@@ -84,7 +84,7 @@ management2 = Program.create(
   tuition: 20000,
   scholarship: "€ 5,000",
   level: "Master",
-  university_id: 1,
+  university: berlin,
   subject: "Management")
 
 finance = Program.create(
@@ -93,7 +93,7 @@ finance = Program.create(
   tuition: 30000,
   scholarship: "€ 1,181",
   level: "Master",
-  university_id: 2,
+  university: berlin,
   subject: "Finance")
 
 finance2 = Program.create(
@@ -102,7 +102,7 @@ finance2 = Program.create(
   tuition: 21500,
   scholarship: "€ 5,000",
   level: "Master",
-  university_id: 1,
+  university: berlin,
   subject: "Finance")
 
 media = Program.create(
@@ -111,7 +111,7 @@ media = Program.create(
   tuition: 2000,
   scholarship: "€ 6,000",
   level: "Bachelor",
-  university_id: 8,
+  university: berlin,
   subject: "Media")
 
 politics = Program.create(
@@ -120,7 +120,7 @@ politics = Program.create(
   tuition: 2000,
   scholarship: "€ 6,000",
   level: "Bachelor",
-  university_id: 8,
+  university: berlin,
   subject: "Politics")
 
 economics = Program.create(
@@ -129,6 +129,6 @@ economics = Program.create(
   tuition: 2000,
   scholarship: "€ 6,000",
   level: "Bachelor",
-  university_id: 8,
+  university: berlin,
   subject: "Economics")
 
