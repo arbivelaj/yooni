@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Program.delete_all
+University.delete_all
 
 university = University.create(name: "University 1")
 
 Program.create(university: university, title: "lewagon", subject: "rails")
 Program.create(university: university, title: "bootcamp", subject: "javascript")
 Program.create(university: university, title: "rails", subject: "airbnb", level: "master")
+Program.create(university: university, title: "rails", level: "master", subject: "economics", tuition: 200)
