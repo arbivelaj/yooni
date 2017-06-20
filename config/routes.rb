@@ -23,7 +23,10 @@ Rails.application.routes.draw do
 
   get 'universities/index'
 
+  get 'search', to: "programs#search", as: :search
+
   devise_for :users
   root to: 'pages#home'
+  resources :programs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

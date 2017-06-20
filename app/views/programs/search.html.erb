@@ -1,0 +1,12 @@
+search.html.erb
+
+<ul>
+  <% @programs.each do |program| %>
+
+    <li>
+      <strong><%= program.title %></strong>
+      <i><%= program.subject %></i>
+
+
+  <% end %>
+</ul>

@@ -1,2 +1,55 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="container">
+  <div class="row">
+    <div col-xs-6 col-xs-offset-6>
+
+      <%= form_tag('/search', method: 'get') do  %>
+      <%= text_field_tag :search_value %>
+      <%= submit_tag 'search', class: "commit commit:hover" %>
+
+      <% end  %>
+
+    </div>
+  </div>
+</div>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Use our 3-Step College Match Tool</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div col-xs-6 col-xs-offset-6>
+
+              <%= form_tag('/search', method: 'get') do  %>
+              <%= text_field_tag :subject, placeholder = "subject" %>
+              <%= text_field_tag :level %>
+              <%= text_field_tag :tuition %>
+              <%= submit_tag 'search', class: "commit commit:hover" %>
+
+              <% end  %>
+
+            </div>
+          </div>
+        </div>
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

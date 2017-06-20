@@ -4,4 +4,12 @@ class ProgramsController < ApplicationController
 
   def index
   end
+
+  def search
+    if params[:search_value].nil?
+      @programs = Program.search_modal(params[:subject], params[:level], params[:tuition])
+    else
+      @programs = Program.search(params[:search_value])
+    end
+  end
 end
