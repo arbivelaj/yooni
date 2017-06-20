@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'applications/create'
 
   get 'applications/show'
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
+  get 'user/:id/profile', to: 'users#show' , as: 'user_profile'
+
   get 'users/update'
 
   get 'programs/show'
@@ -25,7 +28,7 @@ Rails.application.routes.draw do
 
   get 'search', to: "programs#search", as: :search
 
-  devise_for :users
+
   root to: 'pages#home'
   resources :programs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

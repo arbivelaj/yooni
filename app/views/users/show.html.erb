@@ -1,2 +1,9 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
+
+
+<% @favourites.each do |f| %>
+<%= f.program.title  %>
+
+<%end  %>
