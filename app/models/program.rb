@@ -10,5 +10,15 @@ class Program < ApplicationRecord
       q = "%#{query}%"
       self.where("title ILIKE ? OR scholarship ILIKE ? OR subject ILIKE ? OR level ILIKE ?", q, q, q, q)
     end
+
+    def search_modal(subject, level, tuition)
+      q1 = "%#{subject}%"
+      q2 = "%#{level}%"
+      q3 = tuition
+
+      self.where("subject ILIKE ? OR level ILIKE ? OR tuition = ?", q1, q2, q3)
+    end
+
+
   end
 end
