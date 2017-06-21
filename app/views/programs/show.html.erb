@@ -2,12 +2,24 @@
 <ul>
   <li>
     <%= @program.title %>
-    </li>
-    <%= @program.subject %>
-    <%= @program.ranking %>
-    <%= @program.tuition %>
-    <%= @program.title %>
-    <%= @program.scholarship %>
-    <%= @program.university.name %>
-    <%= @program.university.images %>
+  </li>
+  <%= @program.subject %>
+  <%= @program.ranking %>
+  <%= @program.tuition %>
+  <%= @program.title %>
+  <%= @program.scholarship %>
+  <%= @program.university.name %>
+  <%= @program.university.images %>
 </ul>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-4 col-xs-offset-4">
+
+      <%= link_to "Mark #{@program} as favourite" , favourites_show_path(@field), :method=> :post, :data => {:confirm => 'Are you sure you want to book this field?'}, :class => 'rhea-button btn btn-lg btn-show'%>
+
+
+    </div>
+  </div>
+</div>
