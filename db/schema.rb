@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620161751) do
+ActiveRecord::Schema.define(version: 20170621150135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20170620161751) do
     t.string   "title"
     t.integer  "ranking"
     t.integer  "tuition"
-    t.string   "scholarship"
+    t.integer  "scholarship"
     t.string   "level"
     t.integer  "university_id"
     t.string   "subject"

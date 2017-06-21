@@ -8,7 +8,7 @@ class Program < ApplicationRecord
   class << self
     def search(query)
       q = "%#{query}%"
-      self.where("title ILIKE ? OR scholarship ILIKE ? OR subject ILIKE ? OR level ILIKE ?", q, q, q, q)
+      self.where("title ILIKE ? OR subject ILIKE ? OR level ILIKE ?", q, q, q)
     end
 
     def search_modal(subject, level, tuition)
@@ -37,6 +37,10 @@ class Program < ApplicationRecord
 
     def search_tuition(t)
       self.where("tuition < ?", t)
+    end
+
+    def search_scholarship(s)
+      self.where("scholarship < ?", s)
     end
 
   end
