@@ -25,6 +25,19 @@ class Program < ApplicationRecord
       data.flatten
     end
 
+    def search_city(c)
+      cit = "%#{c}%"
+      University.where("location ILIKE ?", cit).map {|university| university.programs }.flatten
+    end
+
+     def search_level(l)
+      lev = "%#{l}%"
+      self.where("level ILIKE ?", lev)
+    end
+
+    def search_tuition(t)
+      self.where("tuition < ?", t)
+    end
 
   end
 end
