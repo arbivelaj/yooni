@@ -1,5 +1,4 @@
-Program.delete_all
-University.delete_all
+
 
 
 edhec = University.create(
