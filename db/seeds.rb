@@ -24,7 +24,7 @@ bocconi = University.create(
   location: "Via Roberto Sarfatti, 25, 20100 Milano, Italy",
   description: "For a century, Bocconi has played a leading role in Italy's social and economic modernization. It has remained true to its founding values of being a major research university, with democratic values and open to the world, as well as financially and politically independent.",
   website: "https://www.unibocconi.eu",
-  phone_number: "+390258363535" ,
+  phone_number: "+390258363535",
   contact: "inexchange@unibocconi.it")
 
 esade = University.create(
