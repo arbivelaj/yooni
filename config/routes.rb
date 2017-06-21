@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'applications/index'
 
-  post 'favourites/create'
+  get 'favourites/create'
 
   get 'favourites/show'
 
@@ -31,9 +31,10 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :programs  do
+  resources :programs do
+    resources :favourites, only: :create
     resources :reviews, only: :create
-    resources :favourites
+
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

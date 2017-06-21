@@ -1,8 +1,13 @@
 class ProgramsController < ApplicationController
   def show
-    @program = Program.find(params[:id])
+
     @review = Review.new
 
+    if params[:flash]
+      favourite = Favourite.create(user: current_user, program_id: params[:id])
+    end
+
+    @program = Program.find(params[:id])
   end
 
   def index
