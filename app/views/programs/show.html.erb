@@ -39,6 +39,7 @@
         <%= @program.university.contact %>
 
 
+
         <div class="container">
           <div class="row">
 
@@ -65,4 +66,20 @@
           </div>
         </div>
       </div>
+
+  <h2>
+          <%= pluralize @program.reviews.size, "review" %>
+        </h2>
+
+        <div id="reviews" class="text-box">
+          <% if @program.reviews.blank? %>
+          Be the first to leave a review for <%= @program.title %>
+          <% else %>
+          <% @program.reviews.each do |review| %>
+          <%= render 'reviews/show', review: review %>
+          <% end %>
+          <% end %>
+          <%= render 'reviews/form', program: @program, review: @review %>
+        </div>
+</div>
 

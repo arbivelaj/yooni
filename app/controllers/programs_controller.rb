@@ -1,6 +1,8 @@
 class ProgramsController < ApplicationController
   def show
 
+    @review = Review.new
+
     if params[:flash]
       favourite = Favourite.create(user: current_user, program_id: params[:id])
     end
@@ -17,6 +19,7 @@ class ProgramsController < ApplicationController
     @level = %w(Master Bachelor MBA)
     @tuition = [1000, 5000, 10000]
     @subject = %w(Economics Management Mathematics Computer Finance Media Politics Actuarial Engineering Markeking Law Biology )
+    @scholarship = [0, 1000, 5000, 10000]
     query = {}
 
 
@@ -81,6 +84,21 @@ class ProgramsController < ApplicationController
 
     if params[:tuition]
       @programs = Program.search_tuition(params[:tuition]).select do |program|
+        program.university and program.university.latitude and program.university.longitude
+      end
+
+      @list = @programs.map { |p| p.university }
+
+
+      @hash = Gmaps4rails.build_markers(@list) do |uni, marker|
+
+        marker.lat uni.latitude
+        marker.lng uni.longitude
+      end
+    end
+
+    if params[:scholarship]
+      @programs = Program.search_scholarship(params[:scholarship]).select do |program|
         program.university and program.university.latitude and program.university.longitude
       end
 
