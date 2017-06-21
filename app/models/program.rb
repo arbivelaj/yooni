@@ -1,9 +1,9 @@
 class Program < ApplicationRecord
   belongs_to :university
-  has_many :favourites
+  has_many :favourites, dependent: :destroy
   has_many :users, through: :favourites
-  has_many :applications
-  has_many :reviews
+  has_many :applications , dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
   class << self
     def search(query)
