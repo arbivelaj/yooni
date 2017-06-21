@@ -114,6 +114,16 @@ media = Program.create(
   university: amsterdam,
   subject: "Media")
 
+media2 = Program.create(
+  title: "Bachelor's in Media and Information",
+  ranking: 58,
+  tuition: 2000,
+  scholarship: "€ 6,000",
+  level: "Bachelor",
+  university: bocconi,
+  subject: "Media")
+
+
 politics = Program.create(
   title: "Bachelor's in Political Science",
   ranking: 58,
