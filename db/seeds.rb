@@ -75,7 +75,7 @@ management = Program.create(
   tuition: 20000,
   scholarship: "€ 1,181",
   level: "Master",
-  university_id: 2,
+  university: hec,
   subject: "Management")
 
 management2 = Program.create(
@@ -84,7 +84,7 @@ management2 = Program.create(
   tuition: 20000,
   scholarship: "€ 5,000",
   level: "Master",
-  university_id: 1,
+  university: edhec,
   subject: "Management")
 
 finance = Program.create(
@@ -93,7 +93,7 @@ finance = Program.create(
   tuition: 30000,
   scholarship: "€ 1,181",
   level: "Master",
-  university_id: 2,
+  university: hec,
   subject: "Finance")
 
 finance2 = Program.create(
@@ -102,7 +102,7 @@ finance2 = Program.create(
   tuition: 21500,
   scholarship: "€ 5,000",
   level: "Master",
-  university_id: 1,
+  university: edhec,
   subject: "Finance")
 
 media = Program.create(
@@ -111,7 +111,7 @@ media = Program.create(
   tuition: 2000,
   scholarship: "€ 6,000",
   level: "Bachelor",
-  university_id: 8,
+  university: amsterdam,
   subject: "Media")
 
 politics = Program.create(
@@ -120,7 +120,7 @@ politics = Program.create(
   tuition: 2000,
   scholarship: "€ 6,000",
   level: "Bachelor",
-  university_id: 8,
+  university: amsterdam,
   subject: "Politics")
 
 economics = Program.create(
@@ -129,6 +129,169 @@ economics = Program.create(
   tuition: 2000,
   scholarship: "€ 6,000",
   level: "Bachelor",
-  university_id: 8,
+  university: amsterdam,
   subject: "Economics")
 
+# Feed it bwoy!
+
+science = Program.create(
+  title: "Bachelor's in Actuarial Science",
+  ranking: 58,
+  tuition: 2006,
+  scholarship: "€ 18,000",
+  level: "Bachelor",
+  university: amsterdam,
+  subject: "Science")
+
+engineering = Program.create(
+  title: "Bachelor's in Design Engineering",
+  ranking: 58,
+  tuition: 9250,
+  scholarship: "€ 5,000",
+  level: "Bachelor",
+  university: imperial,
+  subject: "Engineering")
+
+computer science = Program.create(
+  title: "Bachelor's in Computing Artificial Intelligence",
+  ranking: 12,
+  tuition: 9250,
+  scholarship: "€ 5,000",
+  level: "Bachelor",
+  university: imperial,
+  subject: "computer science")
+
+business = Program.create(
+  title: "Executive MBA",
+  ranking: 8,
+  tuition: 39500,
+  scholarship: "€ 8,500",
+  level: "Master",
+  university: edhec,
+  subject: "managemnt")
+
+business2 = Program.create(
+  title: "Full time MBA",
+  ranking: 17,
+  tuition: 12540,
+  scholarship: "€ 8,500",
+  level: "MBA",
+  university: esade,
+  subject: "management")
+
+business3 = Program.create(
+  title: "Full time MBA",
+  ranking: 17,
+  tuition: 12540,
+  scholarship: "€ 8,500",
+  level: "MBA",
+  university: esade,
+  subject: "management")
+
+marketing2 = Program.create(
+  title: "Integrated marketing for the digital world",
+  ranking: 22,
+  tuition: 22900,
+  scholarship: "€ 1,181",
+  level: "Master",
+  university: hec,
+  subject: "Marketing")
+
+business4 = Program.create(
+  title: "Bachelor of Business Administration",
+  ranking: 27,
+  tuition: 15200,
+  scholarship: "€ 7,600",
+  level: "Bachelor",
+  university: esade,
+  subject: "business")
+
+law = Program.create(
+  title: "Bachelor in Law",
+  ranking: 27,
+  tuition: 15200,
+  scholarship: "€ 7,600",
+  level: "Bachelor",
+  university: esade,
+  subject: "law")
+
+finance3 = Program.create(
+  title: "Executive Master in Finance",
+  ranking: 30,
+  tuition: 30000,
+  scholarship: "€ 8,000",
+  level: "Master",
+  university: bocconi,
+  subject: "finance")
+
+management3 = Program.create(
+  title: "Executive MBA",
+  ranking: 14,
+  tuition: 44000,
+  scholarship: "€ 30,000",
+  level: "Master",
+  university: bocconi,
+  subject: "management")
+
+medicine = Program.create(
+  title: "Medical Biotechnology",
+  ranking: 17,
+  tuition: 4073,
+  scholarship: "€ 11,000",
+  level: "Master",
+  university: bologna,
+  subject: "management")
+
+biology = Program.create(
+  title: "Bioinformatics",
+  ranking: 10,
+  tuition: 4073,
+  scholarship: "€ 11,000",
+  level: "Master",
+  university: bologna,
+  subject: "biology")
+
+sociology = Program.create(
+  title: "Data Science",
+  ranking: 13,
+  tuition:  14800,
+  scholarship: "€ 11,000",
+  level: "Master",
+  university: bologna,
+  subject: "sociology")
+
+engineering2 = Program.create(
+  title: "Chemical Engineering",
+  ranking: 4,
+  tuition:  9250 ,
+  scholarship: "€ 5,000",
+  level: "Bachelor",
+  university: imperial,
+  subject: "sociology")
+
+biology = Program.create(
+  title: "Biochemistry",
+  ranking: 8,
+  tuition:  9250 ,
+  scholarship: "€ 5,000",
+  level: "Bachelor",
+  university: imperial,
+  subject: "biology")
+
+engineering3 = Program.create(
+  title: "Aeronautical Engineering",
+  ranking: 3,
+  tuition:  9250 ,
+  scholarship: "€ 5,000",
+  level: "Bachelor",
+  university: imperial,
+  subject: "engineering")
+
+engineering4 = Program.create(
+  title: "Materials Science and Engineering",
+  ranking: 3,
+  tuition:  9250 ,
+  scholarship: "€ 5,000",
+  level: "Bachelor",
+  university: imperial,
+  subject: "engineering")
