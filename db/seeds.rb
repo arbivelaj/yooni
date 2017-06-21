@@ -152,7 +152,7 @@ engineering = Program.create(
   university: imperial,
   subject: "Engineering")
 
-computer science = Program.create(
+computer1 = Program.create(
   title: "Bachelor's in Computing Artificial Intelligence",
   ranking: 12,
   tuition: 9250,
