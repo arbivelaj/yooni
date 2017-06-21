@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'applications/index'
 
-  get 'favourites/create'
+  post 'favourites/create'
 
   get 'favourites/show'
 
