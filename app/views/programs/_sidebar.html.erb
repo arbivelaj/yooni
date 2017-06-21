@@ -1,7 +1,5 @@
 
 
-    <!-- uncomment code for absolute positioning tweek see top comment in css -->
-    <!-- <div class="absolute-wrapper"> </div> -->
     <!-- Menu -->
     <div class="side-menu">
 
@@ -20,7 +18,7 @@
             <!-- Brand -->
             <div class="brand-name-wrapper">
               <a class="navbar-brand" href="#">
-                Generic Search
+                Update your SEARCH
               </a>
             </div>
 
@@ -118,9 +116,29 @@
               <div id="dropdown-lvl4" class="panel-collapse collapse">
                 <div class="panel-body">
                   <ul class="nav navbar-nav">
-                    <% @subject.each do |sub| %>
-                    <% search_filter4 = request.query_parameters.merge({subject: sub}) %>
-                    <li><%= link_to sub, search_path(search_filter4) %></li>
+                    <% @subject.each do |subi| %>
+                    <% search_filter4 = request.query_parameters.merge({subject: subi}) %>
+                    <li><%= link_to subi, search_path(search_filter4) %></li>
+                    <% end %>
+
+
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="panel panel-default" id="dropdown">
+              <a data-toggle="collapse" href="#dropdown-lvl5">
+                <span class="glyphicon glyphicon-user"></span> Scholarship <span class="caret"></span>
+              </a>
+
+              <!-- Dropdown level 1 -->
+              <div id="dropdown-lvl5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav navbar-nav">
+                    <% @scholarship.each do |subi| %>
+                    <% search_filter4 = request.query_parameters.merge({scholarship: subi}) %>
+                    <li><%= link_to subi, search_path(search_filter4) %></li>
                     <% end %>
 
 
@@ -136,8 +154,8 @@
       </nav>
 
     </div>
+    </div>
 
-    <div class="col-xs-9">
 
       <!-- Main Content -->
       <div class="container-fluid">

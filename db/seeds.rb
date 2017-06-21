@@ -73,7 +73,7 @@ management = Program.create(
   title: "Master in Management",
   ranking: 1,
   tuition: 20000,
-  scholarship: "€ 1,181",
+  scholarship: 1181,
   level: "Master",
   university: hec,
   subject: "Management")
@@ -82,7 +82,7 @@ management2 = Program.create(
   title: "Master in Management",
   ranking: 15,
   tuition: 20000,
-  scholarship: "€ 5,000",
+  scholarship: 5000,
   level: "Master",
   university: edhec,
   subject: "Management")
@@ -91,7 +91,7 @@ finance = Program.create(
   title: "Master in International Finance",
   ranking: 2,
   tuition: 30000,
-  scholarship: "€ 1,181",
+  scholarship: 1181,
   level: "Master",
   university: hec,
   subject: "Finance")
@@ -100,7 +100,7 @@ finance2 = Program.create(
   title: "Master in Finance",
   ranking: 1,
   tuition: 21500,
-  scholarship: "€ 5,000",
+  scholarship: 5000,
   level: "Master",
   university: edhec,
   subject: "Finance")
@@ -109,7 +109,7 @@ media = Program.create(
   title: "Bachelor's in Media and Information",
   ranking: 58,
   tuition: 2000,
-  scholarship: "€ 6,000",
+  scholarship: 6000,
   level: "Bachelor",
   university: amsterdam,
   subject: "Media")
@@ -118,7 +118,7 @@ media2 = Program.create(
   title: "Bachelor's in Media and Information",
   ranking: 58,
   tuition: 2000,
-  scholarship: "€ 6,000",
+  scholarship: 6000,
   level: "Bachelor",
   university: bocconi,
   subject: "Media")
@@ -128,7 +128,7 @@ politics = Program.create(
   title: "Bachelor's in Political Science",
   ranking: 58,
   tuition: 2000,
-  scholarship: "€ 6,000",
+  scholarship: 6000,
   level: "Bachelor",
   university: amsterdam,
   subject: "Politics")
@@ -137,7 +137,7 @@ economics = Program.create(
   title: "Bachelor's in Economics",
   ranking: 58,
   tuition: 2000,
-  scholarship: "€ 6,000",
+  scholarship: 6000,
   level: "Bachelor",
   university: amsterdam,
   subject: "Economics")
@@ -148,7 +148,7 @@ science = Program.create(
   title: "Bachelor's in Actuarial Science",
   ranking: 58,
   tuition: 2006,
-  scholarship: "€ 18,000",
+  scholarship: 18000,
   level: "Bachelor",
   university: amsterdam,
   subject: "Actuarial")
@@ -157,7 +157,7 @@ engineering = Program.create(
   title: "Bachelor's in Design Engineering",
   ranking: 58,
   tuition: 9250,
-  scholarship: "€ 5,000",
+  scholarship: 5000,
   level: "Bachelor",
   university: imperial,
   subject: "Engineering")
@@ -166,7 +166,7 @@ computer1 = Program.create(
   title: "Bachelor's in Computing Artificial Intelligence",
   ranking: 12,
   tuition: 9250,
-  scholarship: "€ 5,000",
+  scholarship: 5000,
   level: "Bachelor",
   university: imperial,
   subject: "computer science")
@@ -175,7 +175,7 @@ business = Program.create(
   title: "Executive MBA",
   ranking: 8,
   tuition: 39500,
-  scholarship: "€ 8,500",
+  scholarship: 8500,
   level: "MBA",
   university: edhec,
   subject: "Management")
@@ -184,7 +184,7 @@ business2 = Program.create(
   title: "Full time MBA",
   ranking: 17,
   tuition: 12540,
-  scholarship: "€ 8,500",
+  scholarship: 8500,
   level: "MBA",
   university: esade,
   subject: "Management")
@@ -193,7 +193,7 @@ business3 = Program.create(
   title: "Full time MBA",
   ranking: 17,
   tuition: 12540,
-  scholarship: "€ 8,500",
+  scholarship: 8500,
   level: "MBA",
   university: esade,
   subject: "Management")
@@ -202,7 +202,7 @@ marketing2 = Program.create(
   title: "Integrated marketing for the digital world",
   ranking: 22,
   tuition: 22900,
-  scholarship: "€ 1,181",
+  scholarship: 1181,
   level: "Master",
   university: hec,
   subject: "Marketing")
@@ -211,7 +211,7 @@ business4 = Program.create(
   title: "Bachelor of Business Administration",
   ranking: 27,
   tuition: 15200,
-  scholarship: "€ 7,600",
+  scholarship: 7600,
   level: "Bachelor",
   university: esade,
   subject: "Management")
@@ -220,7 +220,7 @@ law = Program.create(
   title: "Bachelor in Law",
   ranking: 27,
   tuition: 15200,
-  scholarship: "€ 7,600",
+  scholarship: 7600,
   level: "Bachelor",
   university: esade,
   subject: "Law")
@@ -229,7 +229,7 @@ finance3 = Program.create(
   title: "Executive Master in Finance",
   ranking: 30,
   tuition: 30000,
-  scholarship: "€ 8,000",
+  scholarship: 8000,
   level: "Master",
   university: bocconi,
   subject: "Finance")
@@ -238,7 +238,7 @@ management3 = Program.create(
   title: "Executive MBA",
   ranking: 14,
   tuition: 44000,
-  scholarship: "€ 30,000",
+  scholarship: 30000,
   level: "MBA",
   university: bocconi,
   subject: "Management")
@@ -247,7 +247,7 @@ medicine = Program.create(
   title: "Medical Biotechnology",
   ranking: 17,
   tuition: 4073,
-  scholarship: "€ 11,000",
+  scholarship: 11000,
   level: "Master",
   university: bologna,
   subject: "Biology")
@@ -256,7 +256,7 @@ biology = Program.create(
   title: "Bioinformatics",
   ranking: 10,
   tuition: 4073,
-  scholarship: "€ 11,000",
+  scholarship: 11000,
   level: "Master",
   university: bologna,
   subject: "Biology")
@@ -265,7 +265,7 @@ sociology = Program.create(
   title: "Data Science",
   ranking: 13,
   tuition:  14800,
-  scholarship: "€ 11,000",
+  scholarship: 11000,
   level: "Master",
   university: bologna,
   subject: "Economics")
@@ -274,7 +274,7 @@ engineering2 = Program.create(
   title: "Chemical Engineering",
   ranking: 4,
   tuition:  9250 ,
-  scholarship: "€ 5,000",
+  scholarship: 5000,
   level: "Bachelor",
   university: imperial,
   subject: "Economics")
@@ -283,7 +283,7 @@ biology = Program.create(
   title: "Biochemistry",
   ranking: 8,
   tuition:  9250 ,
-  scholarship: "€ 5,000",
+  scholarship: 5000,
   level: "Bachelor",
   university: imperial,
   subject: "Biology")
@@ -292,7 +292,7 @@ engineering3 = Program.create(
   title: "Aeronautical Engineering",
   ranking: 3,
   tuition:  9250 ,
-  scholarship: "€ 5,000",
+  scholarship: 5000,
   level: "Bachelor",
   university: imperial,
   subject: "Engineering")
@@ -301,7 +301,7 @@ engineering4 = Program.create(
   title: "Materials Science and Engineering",
   ranking: 3,
   tuition:  9250 ,
-  scholarship: "€ 5,000",
+  scholarship: 5000,
   level: "Bachelor",
   university: imperial,
   subject: "Engineering")
