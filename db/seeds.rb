@@ -29,7 +29,7 @@ bocconi = University.create(
 
 esade = University.create(
   name: "ESADE Business School",
-  location: "Avinguda de Pedralbes, 60-62, 08034 Barcelona",
+  location: "Avinguda de Pedralbes, 60-62, 08034 Barcelona, Spain",
   description: "ESADE is an international academic institution with over fifty years of history. The main asset of this school are people: faculty members and professionals who nurture reflection, dialogue, projects and initiatives to ensure excellent education, pioneering research and a valuable contribution to social debate and transformation.",
   website: "https://www.esade.eu",
   phone_number: "+34932806162" ,
@@ -37,7 +37,7 @@ esade = University.create(
 
 imperial = University.create(
   name: "Imperial College London",
-  location: "Kensington, London SW7 2AZ, United Kingdom",
+  location: "Kensington, London SW7 2AZ, UK",
   description: "Imperial College London is a world-class university with a mission to benefit society through excellence in science, engineering, medicine and business.",
   website: "https://www.esade.eu",
   phone_number: "+34932806162",
@@ -141,7 +141,7 @@ science = Program.create(
   scholarship: "€ 18,000",
   level: "Bachelor",
   university: amsterdam,
-  subject: "Science")
+  subject: "Actuarial")
 
 engineering = Program.create(
   title: "Bachelor's in Design Engineering",
@@ -166,9 +166,9 @@ business = Program.create(
   ranking: 8,
   tuition: 39500,
   scholarship: "€ 8,500",
-  level: "Master",
+  level: "MBA",
   university: edhec,
-  subject: "managemnt")
+  subject: "Management")
 
 business2 = Program.create(
   title: "Full time MBA",
@@ -177,7 +177,7 @@ business2 = Program.create(
   scholarship: "€ 8,500",
   level: "MBA",
   university: esade,
-  subject: "management")
+  subject: "Management")
 
 business3 = Program.create(
   title: "Full time MBA",
@@ -186,7 +186,7 @@ business3 = Program.create(
   scholarship: "€ 8,500",
   level: "MBA",
   university: esade,
-  subject: "management")
+  subject: "Management")
 
 marketing2 = Program.create(
   title: "Integrated marketing for the digital world",
@@ -204,7 +204,7 @@ business4 = Program.create(
   scholarship: "€ 7,600",
   level: "Bachelor",
   university: esade,
-  subject: "business")
+  subject: "Management")
 
 law = Program.create(
   title: "Bachelor in Law",
@@ -213,7 +213,7 @@ law = Program.create(
   scholarship: "€ 7,600",
   level: "Bachelor",
   university: esade,
-  subject: "law")
+  subject: "Law")
 
 finance3 = Program.create(
   title: "Executive Master in Finance",
@@ -222,16 +222,16 @@ finance3 = Program.create(
   scholarship: "€ 8,000",
   level: "Master",
   university: bocconi,
-  subject: "finance")
+  subject: "Finance")
 
 management3 = Program.create(
   title: "Executive MBA",
   ranking: 14,
   tuition: 44000,
   scholarship: "€ 30,000",
-  level: "Master",
+  level: "MBA",
   university: bocconi,
-  subject: "management")
+  subject: "Management")
 
 medicine = Program.create(
   title: "Medical Biotechnology",
@@ -240,7 +240,7 @@ medicine = Program.create(
   scholarship: "€ 11,000",
   level: "Master",
   university: bologna,
-  subject: "management")
+  subject: "Biology")
 
 biology = Program.create(
   title: "Bioinformatics",
@@ -249,7 +249,7 @@ biology = Program.create(
   scholarship: "€ 11,000",
   level: "Master",
   university: bologna,
-  subject: "biology")
+  subject: "Biology")
 
 sociology = Program.create(
   title: "Data Science",
@@ -258,7 +258,7 @@ sociology = Program.create(
   scholarship: "€ 11,000",
   level: "Master",
   university: bologna,
-  subject: "sociology")
+  subject: "Economics")
 
 engineering2 = Program.create(
   title: "Chemical Engineering",
@@ -267,7 +267,7 @@ engineering2 = Program.create(
   scholarship: "€ 5,000",
   level: "Bachelor",
   university: imperial,
-  subject: "sociology")
+  subject: "Economics")
 
 biology = Program.create(
   title: "Biochemistry",
@@ -276,7 +276,7 @@ biology = Program.create(
   scholarship: "€ 5,000",
   level: "Bachelor",
   university: imperial,
-  subject: "biology")
+  subject: "Biology")
 
 engineering3 = Program.create(
   title: "Aeronautical Engineering",
@@ -285,7 +285,7 @@ engineering3 = Program.create(
   scholarship: "€ 5,000",
   level: "Bachelor",
   university: imperial,
-  subject: "engineering")
+  subject: "Engineering")
 
 engineering4 = Program.create(
   title: "Materials Science and Engineering",
@@ -294,4 +294,4 @@ engineering4 = Program.create(
   scholarship: "€ 5,000",
   level: "Bachelor",
   university: imperial,
-  subject: "engineering")
+  subject: "Engineering")
