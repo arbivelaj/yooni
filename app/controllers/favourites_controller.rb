@@ -6,7 +6,7 @@ class FavouritesController < ApplicationController
  # if @favourite.save
   # redirect_to favourite_confirmation_path(@favourite)
   end
-  @favourite.save
+  # @favourite.save
   def show
   end
 end
