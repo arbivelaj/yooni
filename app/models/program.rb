@@ -16,7 +16,13 @@ class Program < ApplicationRecord
       q2 = "%#{level}%"
       q3 = tuition
 
-      self.where("subject ILIKE ? OR level ILIKE ? OR tuition = ?", q1, q2, q3)
+      data = [
+        (subject.present?) ? self.where("subject ILIKE ?", q1) : [],
+        (level.present?) ? self.where("level ILIKE ?", q2) : [],
+        (not tuition.zero?) ? self.where("tuition = ?", q3) : [],
+      ]
+
+      data.flatten
     end
 
 
