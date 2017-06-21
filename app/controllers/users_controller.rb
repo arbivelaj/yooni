@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
 
   def show
-    @favourites = Favourite.where(user_id: current_user.id)
+    @favourites = current_user.favourite_programs
     # @fields = @favourites.map {|booking| booking.field}
     @user = current_user
   end
