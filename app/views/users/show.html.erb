@@ -1,7 +1,13 @@
 
-
+<h1>FAVOURITES</h1>
 <% @favourites.each do |f| %>
 <%= f.title  %>
 
 <%end  %>
+
+<h1>APPLICATIONS</h1>
+
+<% @applications.each do |p| %>
+<%= p.program.title %>
+<% end %>
 
