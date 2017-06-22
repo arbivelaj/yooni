@@ -53,3 +53,14 @@
 
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+    <% @universities = University.all %>
+      <% @universities.each do |uni| %>
+      <%= uni.name %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<%= simple_form_for [ program,review ], :url => program_reviews_path(:program_id => program.id), :method => :post   do |form| %>
+  <%= form.input :content, as: :text %>
+  <%= form.button :submit %>
+<% end %>
+

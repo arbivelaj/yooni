@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
   has_many :applications
   has_many :favourites
-  has_many :programs, through: :favourites
+  has_many :favourite_programs, through: :favourites, source: :program
 
   # facebook
   def self.find_for_facebook_oauth(auth)
@@ -27,4 +27,5 @@ class User < ApplicationRecord
 
     return user
   end
+
 end
