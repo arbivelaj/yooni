@@ -55,7 +55,12 @@
             <div class="panel-body">
               <ul class="nav navbar-nav">
                 <% @cities.each do |city| %>
+
                 <% search_filter = request.query_parameters.merge({location: city}) %>
+                <% search_filter.delete(:search_value)   %>
+
+
+
                 <li><%= link_to city, search_path(search_filter) %></li>
                 <% end %>
 
@@ -76,6 +81,8 @@
               <ul class="nav navbar-nav">
                 <% @level.each do |lev| %>
                 <% search_filter2 = request.query_parameters.merge({level: lev}) %>
+                <% search_filter2.delete(:search_value)   %>
+
                 <li><%= link_to lev, search_path(search_filter2) %></li>
                 <% end %>
 
@@ -96,6 +103,7 @@
               <ul class="nav navbar-nav">
                 <% @tuition.each do |tui| %>
                 <% search_filter3 = request.query_parameters.merge({tuition: tui}) %>
+                <% search_filter3.delete(:search_value)   %>
                 <li><%= link_to "<#{tui}", search_path(search_filter3) %></li>
                 <% end %>
 
@@ -116,6 +124,7 @@
               <ul class="nav navbar-nav">
                 <% @subject.each do |subi| %>
                 <% search_filter4 = request.query_parameters.merge({subject: subi}) %>
+                <% search_filter4.delete(:search_value)   %>
                 <li><%= link_to subi, search_path(search_filter4) %></li>
                 <% end %>
 
@@ -135,8 +144,9 @@
             <div class="panel-body">
               <ul class="nav navbar-nav">
                 <% @scholarship.each do |subi| %>
-                <% search_filter4 = request.query_parameters.merge({scholarship: subi}) %>
-                <li><%= link_to ">#{subi}", search_path(search_filter4) %></li>
+                <% search_filter5 = request.query_parameters.merge({scholarship: subi}) %>
+                <% search_filter5.delete(:search_value)   %>
+                <li><%= link_to ">#{subi}", search_path(search_filter5) %></li>
                 <% end %>
 
 
