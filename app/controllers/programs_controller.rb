@@ -9,6 +9,9 @@ class ProgramsController < ApplicationController
       favourite = Favourite.create(user: current_user, program_id: params[:id])
     end
 
+    if params[:notice]
+      application = Application.create(user: current_user, program_id: params[:id])
+    end
     @program = Program.find(params[:id])
   end
 
