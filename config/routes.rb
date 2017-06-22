@@ -33,6 +33,9 @@ Rails.application.routes.draw do
   resources :programs do
     resources :favourites, only: :create
     resources :reviews, only: :create
+
+    resources :applications, only: :create
+
   end
 
 # facebook

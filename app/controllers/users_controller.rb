@@ -11,9 +11,12 @@ class UsersController < ApplicationController
 
 
   def show
+
     @favourites = current_user.favourite_programs
     # @fields = @favourites.map {|booking| booking.field}
     @user = current_user
+    @applications = current_user.applications
+
   end
 
   private
