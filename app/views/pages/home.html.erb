@@ -38,7 +38,8 @@
               <%= form_tag('/search', method: 'get') do  %>
               <%= text_field_tag :subject, placeholder = "subject" %>
               <%= text_field_tag :level %>
-              <%= text_field_tag :tuition %>
+              <%= text_field_tag :location %>
+              <%= text_field_tag :tuition%>
               <%= submit_tag 'search', class: "commit commit:hover" %>
 
               <% end  %>
