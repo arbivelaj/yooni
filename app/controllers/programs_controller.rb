@@ -26,7 +26,7 @@ class ProgramsController < ApplicationController
 
     if params[:search_value].nil?
       # Run the modal search
-      @pippo = Program.search_modal(params[:subject], params[:level], params[:location], params[:tuition].to_i)
+      @pippo = Program.search_modal(params[:subject], params[:level], params[:location], params[:tuition].to_i, params[:scholarship])
       @list = @pippo.map { |p| p.university }
 
       @hash = Gmaps4rails.build_markers(@list) do |uni, marker|

@@ -136,7 +136,7 @@
               <ul class="nav navbar-nav">
                 <% @scholarship.each do |subi| %>
                 <% search_filter4 = request.query_parameters.merge({scholarship: subi}) %>
-                <li><%= link_to subi, search_path(search_filter4) %></li>
+                <li><%= link_to ">#{subi}", search_path(search_filter4) %></li>
                 <% end %>
 
 
