@@ -36,6 +36,7 @@
   background-color: #f8f8f8;
   border-right: 1px solid #e7e7e7;
   overflow: scroll;
+  padding-top: 70px;
 }
 .side-menu .navbar {
   border: none;
@@ -156,7 +157,8 @@
 }
 /* Main body section */
 .side-body {
-  margin-left: 310px;
+  margin-left: 290px;
+  padding-top: 70px;
 }
 /* small screen */
 @media (max-width: 768px) {
