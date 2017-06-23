@@ -7,7 +7,18 @@
     margin: 70px auto;
   }
 
+
 </style>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1953389404944384";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <% if params[:flash] %>
 <div class="alert alert-info alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -176,4 +187,5 @@
       <%= render 'reviews/form', program: @program, review: @review %>
     </div>
   </div>
-
+<div class="fb-share-button" data-href="https://yooni.herokuapp.com" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyooni.herokuapp.com%2F&amp;src=sdkpreparse">Share</a></div>
+</body>
