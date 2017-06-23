@@ -1,13 +1,96 @@
+<style>
+  .tabs {
+    display: flex;
+    padding: 10px 10px 0 10px;
+    margin-left: 237px;
+  }
+  .tabs a {
+    color: white;
+  }
+  .tabs a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  .tabs h3 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  .tabs p {
+    opacity: 0.5;
+    margin-bottom: 0;
+  }
+  .tab {
+    background: #D8DFE2;
+    flex: 0 0 25%;
+    text-align: center;
+    padding: 10px 0;
+  }
 
-<h1>FAVOURITES</h1>
-<% @favourites.each do |f| %>
-<%= f.title  %>
 
-<% end  %>
 
-<h1>APPLICATIONS</h1>
+  .tab:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  .tab:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+  .tab.active {
+    background: white;
+    color: black;
+  }
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
 
-<% @applications.each do |p| %>
-<%= p.program.title %>
-<% end %>
+
+
+</style>
+<div class="tabs">
+  <a class="tab active" data-target="#1">
+    <h3><%= @applications.count %></h3>
+    <p>Applications</p>
+
+  </a>
+  <a class="tab" data-target="#2">
+    <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+    <%= image_tag avatar_url %>
+    <p>My Profile</p>
+  </a>
+  <a class="tab" data-target="#3">
+    <h3><%= @favourites.count %></h3>
+    <p>Favourites</p>
+  </a>
+</div>
+
+<div class="container text-center">
+  <div class="tab-content" id="1">
+   <ul> <% @applications.each do |p| %>
+    <li><%= p.program.title %>
+    <% end %>
+    </ul>
+  </div>
+  <div class="tab-content hidden" id="2">
+  <h2>my profile</h2>
+  </div>
+  <div class="tab-content hidden" id="3">
+
+    <% @favourites.each do |f| %>
+    <%= f.title  %>
+    <% end  %>
+  </div>
+</div>
+
+
+
+<script src="profile.js"></script>
 

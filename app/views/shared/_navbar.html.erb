@@ -1,7 +1,15 @@
+<style>
+  .fa-university{
+    font-size: 30px;
+    color: grey;
+  }
+
+</style>
+
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
+    <i class="fa fa-university"></i>
   <% end %>
 
   <!-- Right Navigation -->
@@ -38,7 +46,7 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to root_path do %>
                 <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
               <% end %>
             </li>
