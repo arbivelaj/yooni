@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20170622140740) do
     t.string   "title"
     t.integer  "ranking"
     t.integer  "tuition"
-    t.string   "scholarship"
+    t.integer  "scholarship"
     t.string   "level"
     t.integer  "university_id"
     t.string   "subject"

@@ -19,6 +19,8 @@ class ProgramsController < ApplicationController
 
   end
 
+
+
   def search
     @cities = %w(Italy Spain UK Germany Netherlands France)
     @level = %w(Master Bachelor MBA)
@@ -29,12 +31,13 @@ class ProgramsController < ApplicationController
 
     if params[:search_value].nil?
       # Run the modal search
-      @pippo = Program.search_modal(params[:subject], params[:level], params[:location], params[:tuition].to_i, params[:scholarship])
+      @pippo = Program.search_modal(params[:subject], params[:level], params[:location], params[:tuition].to_i, params[:scholarship].to_i)
       @list = @pippo.map { |p| p.university }
 
       @hash = Gmaps4rails.build_markers(@list) do |uni, marker|
         marker.lat uni.latitude
         marker.lng uni.longitude
+        marker.infowindow render_to_string(partial: "/universities/mapbox", locals: { uni: uni })
       end
 
     elsif params[:search_value]
@@ -49,6 +52,8 @@ class ProgramsController < ApplicationController
 
         marker.lat uni.latitude
         marker.lng uni.longitude
+        marker.infowindow render_to_string(partial: "/universities/mapbox", locals: { uni: uni })
+
       end
 
     else
@@ -120,5 +125,5 @@ class ProgramsController < ApplicationController
   #       marker.lng uni.longitude
   #     end
   #   end
-   end
+end
 end
