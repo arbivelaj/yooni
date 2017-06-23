@@ -37,6 +37,7 @@ class ProgramsController < ApplicationController
       @hash = Gmaps4rails.build_markers(@list) do |uni, marker|
         marker.lat uni.latitude
         marker.lng uni.longitude
+        marker.infowindow render_to_string(partial: "/universities/mapbox", locals: { uni: uni })
       end
 
     elsif params[:search_value]
@@ -51,6 +52,8 @@ class ProgramsController < ApplicationController
 
         marker.lat uni.latitude
         marker.lng uni.longitude
+        marker.infowindow render_to_string(partial: "/universities/mapbox", locals: { uni: uni })
+
       end
 
     else
