@@ -1,5 +1,30 @@
+<style>
+  .main-container {
+    position: relative;
+  }
 
-<div class="container">
+.second-container {
+  position: absolute;
+  top: 150px;
+  left: 30px;
+}
+
+#myCarousel {
+  position: absolute;
+  top: 300px;
+  left: 30px;
+}
+
+.third-container {
+  position: absolute;
+  top: 200px;
+  left: 30px;
+}
+
+</style>
+
+<div class="main-container">
+<div class="container second-container">
   <div class="row">
     <div col-xs-6 col-xs-offset-6>
 
@@ -14,6 +39,9 @@
 </div>
 
 <!-- Trigger the modal with a button -->
+<div class="container third-container">
+  <div class="row">
+    <div col-xs-6 col-xs-offset-6>
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
 <!-- Modal -->
@@ -50,6 +78,9 @@
     </div>
 
   </div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -100,4 +131,4 @@ width: 500)%>
   </a>
 </div>
 
-
+</div>
