@@ -1,9 +1,9 @@
 <style>
   .tabs {
     display: flex;
-    padding: 10px 10px 0 10px;
-    margin-left: 237px;
-    margin-top: 61px;
+    margin-top: 96px;
+    justify-content: space-around;
+    background-color: #D8DFE2;
   }
   .tabs a {
     color: white;
@@ -32,10 +32,10 @@
 
 
   .tab:first-child {
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px 10px 10px 10px;
   }
   .tab:last-child {
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px 10px 10px 10px;
   }
   .tab.active {
     background: white;
@@ -53,11 +53,34 @@
     width: 25%;
   }
 
-  .container-profile{
-    width: 817px;
-  }
+.caroussel-inner {
+  position: relative;
+}
 
+.program-title{
+  position: absolute;
+  left: 5px;
+  top: 70px;
+}
 
+.program-university{
+  position: absolute;
+  left: 70px;
+  top: 60px;
+}
+
+.program-university-location{
+  position: absolute;
+  left: 70px;
+  top: 200px;
+}
+
+.program-creation{
+  position: absolute;
+  left:70px;
+  top: 300px;
+
+}
 </style>
 <div class="tabs">
   <a class="tab active" data-target="#1">
@@ -87,16 +110,24 @@
       </ol>
 
       <!-- Wrapper for slides -->
-      <div class="carousel-inner" style="height: 300px; margin-top: 30px">
+      <div class="carousel-inner" style="height: 550px; margin-top: 30px; position: relative">
         <div class="item active">
-          <img src="https://static.pexels.com/photos/192650/pexels-photo-192650.jpeg" alt="Los Angeles">
+  <!-- ADD program.university.images -->
 
-          <div class="carousel-caption" style="bottom: 235px">
-
-            <h3><%= @applications.first.program.title %></h3>
-            <h4><%= @applications.first.program.university.name %></h4>
-            <p><%= @applications.first.program.university.location %></p>
-            <p><%= @applications.first.created_at%></p>
+          <div class="carousel-caption" style="bottom: 235px; position: absolute; top: 10px; left: 10px">
+            <div class="program-title">
+            <h1 class="text-center"> #1 </h1>
+            <h3>You applied to the program <b><%= @applications.first.program.title %></b></h3>
+            </div>
+            <div class="program-university">
+            <h4><b>At </b><%= @applications.first.program.university.name %></h4>
+            </div>
+            <div class="program-creation">
+            <p><b>On </b><%= @applications.first.created_at%></p>
+            </div>
+            <div class="program-university-location">
+            <p><b>Address: </b><%= @applications.first.program.university.location %></p>
+            </div>
 
           </div>
 
@@ -104,11 +135,21 @@
 
         <div class="item">
           <img src="https://static.pexels.com/photos/414826/pexels-photo-414826.jpeg" alt="Chicago">
-          <div class="carousel-caption" style="bottom: 165px">
-              <h3><%= @applications.last.program.title %></h3>
-            <h4><%= @applications.last.program.university.name %></h4>
-            <p><%= @applications.last.program.university.location %></p>
-            <p><%= @applications.last.created_at%></p>
+
+          <div class="carousel-caption" style="bottom: 235px; position: absolute; top: 10px; left: 10px">
+            <div class="program-title">
+            <h3>You applied to the program<b><%= @applications.first.program.title %></b></h3>
+            </div>
+            <div class="program-university">
+            <h4><b>At </b><%= @applications.first.program.university.name %></h4>
+            </div>
+            <div class="program-creation">
+            <p><b>On </b><%= @applications.first.created_at%></p>
+            </div>
+            <div class="program-university-location">
+            <p><b>Address: </b><%= @applications.first.program.university.location %></p>
+            </div>
+
           </div>
         </div>
 
