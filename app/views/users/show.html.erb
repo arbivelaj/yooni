@@ -1,9 +1,9 @@
 <style>
   .tabs {
     display: flex;
-    padding: 10px 10px 0 10px;
-    margin-left: 237px;
-    margin-top: 61px;
+    margin-top: 96px;
+    justify-content: space-around;
+    background-color: #D8DFE2;
   }
   .tabs a {
     color: white;
@@ -32,10 +32,10 @@
 
 
   .tab:first-child {
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px 10px 10px 10px;
   }
   .tab:last-child {
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px 10px 10px 10px;
   }
   .tab.active {
     background: white;
@@ -53,14 +53,14 @@
     width: 25%;
   }
 
-  .container-profile{
-    width: 100%;
-  }
+.caroussel-inner {
+  position: relative;
+}
 
 .program-title{
   position: absolute;
-  top: 5px;
-  left: 70px;
+  left: 5px;
+  top: 70px;
 }
 
 .program-university{
@@ -76,7 +76,7 @@
 }
 
 .program-creation{
-  position: relative;
+  position: absolute;
   left:70px;
   top: 300px;
 
@@ -112,11 +112,12 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" style="height: 550px; margin-top: 30px; position: relative">
         <div class="item active">
-          <img src="https://static.pexels.com/photos/192650/pexels-photo-192650.jpeg" alt="Los Angeles">
+  <!-- ADD program.university.images -->
 
           <div class="carousel-caption" style="bottom: 235px; position: absolute; top: 10px; left: 10px">
             <div class="program-title">
-            <h3>You applied to the program<b><%= @applications.first.program.title %></b></h3>
+            <h1 class="text-center"> #1 </h1>
+            <h3>You applied to the program <b><%= @applications.first.program.title %></b></h3>
             </div>
             <div class="program-university">
             <h4><b>At </b><%= @applications.first.program.university.name %></h4>
