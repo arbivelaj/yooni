@@ -19,7 +19,7 @@
 
       <%= form_tag('/search', method: 'get') do  %>
       <%= text_field_tag :search_value, "", class: 'search-input-field', id: "search-field" %>
-      <%= submit_tag 'search', class: "commit commit:hover" %>
+      <%= submit_tag 'search', class: "commit commit:hover btn-search" %>
 
       <% end  %>
 
@@ -96,7 +96,13 @@
 </div>
 </div>
 
-<h1 class="text-center"> Featured Universities </h1>
+<div class="header-with-lines text-center">
+  <span></span>
+  <h1>
+    Featured Universities
+  </h1>
+  <span></span>
+</div>
 
 <div class="container-fluid">
   <div class="row">
@@ -149,7 +155,35 @@
   </div>
 </div>
 
-<h1 class="text-center"> How it works </h1>
+   <div id="map" style="width: 100%; height: 600px; float: right;"></div>
+
+   <% content_for(:after_js) do %>
+     <%= javascript_tag do %>
+         $(document).ready(function() {
+         var handler = Gmaps.build('Google');
+         handler.buildMap({ internal: { id: 'map' } }, function() {
+         markers = handler.addMarkers(<%= raw @hash.to_json %>);
+         handler.bounds.extendWith(markers);
+         handler.fitMapToBounds();
+         if (markers.length == 0) {
+         handler.getMap().setZoom(2);
+       } else if (markers.length == 1) {
+       handler.getMap().setZoom(14);
+      }
+      });
+      });
+      <% end %>
+    <% end %>
+
+</div>
+
+<div class="header-with-lines text-center">
+  <span></span>
+  <h1>
+    How it Works
+  </h1>
+  <span></span>
+</div>
 <div class="container">
   <div class="row">
 
