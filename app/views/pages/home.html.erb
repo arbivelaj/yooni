@@ -1,80 +1,93 @@
-<style>
-  .main-container {
-    position: relative;
-  }
 
-.second-container {
-  position: absolute;
-  top: 150px;
-  left: 30px;
-}
 
-#myCarousel {
-  position: absolute;
-  top: 300px;
-  left: 30px;
-}
+<!-- Cloudinary -->
 
-.third-container {
-  position: absolute;
-  top: 200px;
-  left: 30px;
-}
 
-</style>
 
-<div class="main-container">
-<div class="container second-container">
-  <div class="row">
-    <div col-xs-6 col-xs-offset-6>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cloudinary_url("students-working-on-project_4460x4460_dbevuc.jpg", width:1200 , crop: :fill) %>'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+
+  <div class="banner-content">
+    <h1>Yooni</h1>
+    <h2>get matched with best Universities</h2>
+    <ul></ul>
+    <p>Search by school name, subject, level, and other keywords: </p>
+
+
+
+    <div class="search-box">
+
 
       <%= form_tag('/search', method: 'get') do  %>
-      <%= text_field_tag :search_value %>
+      <%= text_field_tag :search_value, "", class: 'search-input-field' %>
       <%= submit_tag 'search', class: "commit commit:hover" %>
 
       <% end  %>
 
     </div>
-  </div>
-</div>
+    <ul></ul>
+    <ul></ul>
 
-<!-- Trigger the modal with a button -->
-<div class="container third-container">
-  <div class="row">
-    <div col-xs-6 col-xs-offset-6>
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+    <p>not sure where to start?</p>
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Use our 3-Step College Match Tool</h4>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div col-xs-6 col-xs-offset-6>
 
+
+
+
+
+
+    <!-- Trigger the modal with a button -->
+    <button type="button" id="modal-button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Get Matched</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Use our 3-Step College Match Tool</h4>
+          </div>
+          <div class="modal-body">
+            <div class="modal-search-questions">
               <%= form_tag('/search', method: 'get') do  %>
-              <%= text_field_tag :subject, placeholder = "subject" %>
-              <%= text_field_tag :level %>
-              <%= text_field_tag :location %>
+              <div>
+                <label for="subject">What is your Topic?
+                  <%= text_field_tag :subject, placeholder = "subject" %>
+                </label>
+              </div>
+              <div>
+                <label for="level">What is your Level?
+                  <%= text_field_tag :level %>
+                </label>
+              </div>
+              <div>
+
+                <label for="location">What is your location?
+
+                </label>
+                <div>
+
+                  <%= text_field_tag :location %>
+                </div>
+              </div>
+
+
+
               <%= text_field_tag :tuition%>
               <%= submit_tag 'search', class: "commit commit:hover" %>
 
               <% end  %>
-
             </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+
     </div>
 
   </div>
@@ -82,6 +95,7 @@
 </div>
 </div>
 </div>
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -105,7 +119,7 @@ width: 500)%>
 
     <div class="item">
       <img src="https://static.pexels.com/photos/414826/pexels-photo-414826.jpeg" alt="Chicago">
-            <div class="carousel-caption">
+      <div class="carousel-caption">
         <h3>Chicago</h3>
         <p>Thank you, Chicago!</p>
       </div>
@@ -113,7 +127,7 @@ width: 500)%>
 
     <div class="item">
       <img src="https://static.pexels.com/photos/443356/pexels-photo-443356.jpeg" alt="New York">
-            <div class="carousel-caption">
+      <div class="carousel-caption">
         <h3>Chicago</h3>
         <p>Thank you, Chicago!</p>
       </div>
