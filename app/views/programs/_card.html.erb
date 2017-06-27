@@ -1,7 +1,8 @@
 <!-- <div class="container">
   <div class="row"> -->
-    <div class="card-program card m-button">
-      <%#= link_to program_path(program), class: "card-link" do%>
+    <div class="card-program card-search m-button" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path program.university.photos.first.path, height: 300, width: 400, crop: :fill %>')">
+      <%= link_to program_path(program), class: "card-search-link" do%>
         <div class="">
           <div>
             <br>
@@ -9,29 +10,16 @@
 
           </div>
         </div>
-      <%# end %>
 
           <div class="card-footer col-xs-6">
             <p class="text-center text-footer">Subject
             <br>
-            <strong><span class="span-footer"><%#= program.subject %></strong></span></p>
+            <strong><span class="span-footer"><%= program.subject %></strong></span></p>
             <br>
             <div class="verticalLine"></div>
-            <p class="text-center text-footer">Tuition<br><strong><span class="span-footer">$<%#= program.tuition %></strong></span></p>
+            <p class="text-center text-footer">Tuition<br><strong><span class="span-footer">$<%= program.tuition %></strong></span></p>
           </div>
+      <% end %>
     </div>
 <!--   </div>
 </div> -->
-
-<div class="card-program">
-<%= link_to program_path(program), class: "card-link" do%>
-  <div class="card m-button">
-  <br>
-  <h3 class="text-center letter-spacing" style="margin-top: 0px";><%= program.title  %></h3>
-  <p class="text-center "><%= program.subject %></p>
-  <p class="text-center"><%= program.tuition %></p>
-   <p class="text-center"><%= program.university.photo %></p>
-  </div>
-
-<% end %>
-</div>

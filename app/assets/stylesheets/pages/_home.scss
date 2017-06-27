@@ -6,7 +6,7 @@
  .card-program {
   height: 200px;
 }
-.card {
+.card-search {
   background-size: cover !important;
   color: #777;
   position: relative;
@@ -24,7 +24,7 @@
     padding-bottom: 50px;
 
   }
-  .card-link {
+  .card-search-link {
     &:hover {
       text-decoration: none;
     }
@@ -65,7 +65,7 @@
 .view-map{
     text-align: center;
     display: block;
-    margin-top: 20px;
+
     text-decoration: none;
     color: green;
     &:hover {
@@ -83,7 +83,7 @@
 
 #map-button-container {
   width:100%;
-  margin-top: 70px;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
