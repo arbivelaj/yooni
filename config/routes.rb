@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Attachinary::Engine => "/attachinary"
+
   get 'applications/create'
 
   get 'applications/show'
@@ -29,8 +31,6 @@ Rails.application.routes.draw do
 
   # devise_for :users
   root to: 'pages#home'
-
-  mount Attachinary::Engine => "/attachinary"
 
   resources :programs do
     resources :favourites, only: :create
