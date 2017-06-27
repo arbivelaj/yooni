@@ -1,0 +1,40 @@
+<div id="myCarousel<%= number %>" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <% favourites.each_with_index do |application, index| %>
+    <% if index.zero? %>
+    <li data-target="#myCarousel" data-slide-to="<%= index %>" class="active"></li>
+    <% else %>
+    <li data-target="#myCarousel" data-slide-to="<%= index %>"></li>
+    <% end %>
+    <% end %>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" style="height: 550px; margin-top: 30px; position: relative">
+    <% favourites.each_with_index do |application, index| %>
+    <div class="item <%= "active" if index.zero? %>">
+                      <div class="carousel-caption" style="bottom: 235px; position: absolute; top: 10px; left: 10px">
+                        <div class="program-title">
+                          <h3>You applied to the program <b><%= application.title %></b></h3>
+                        </div>
+                        <div class="program-university">
+                          <h4><b>At </b><%=  application.level %></h4>
+                        </div>
+                        <div class="program-creation">
+                          <p><b>On </b><%= application.created_at%></p>
+                        </div>
+                        <div class="program-university-location">
+                          <p><b>tuition: </b><%= application.tuition %></p>
+                        </div>
+                      </div>
+    </div>
+  <% end %>
+  <a class="left carousel-control" href="#myCarousel<%= number %>" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel<%= number %>" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
