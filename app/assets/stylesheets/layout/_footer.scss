@@ -15,8 +15,8 @@
   background: #E3E3E3;
   height: auto;
   padding-bottom: 0px;
-  position: absolute;
-  width: 1140px;
+  // position: absolute;
+  // width: 1140px;
   border-bottom: 1px solid #CCCCCC;
   border-top: 1px solid #DDDDDD;
 }
@@ -151,6 +151,7 @@
 }
 
 #logo-footer {
+  padding-top: 20px;
   color: green;
-  font-size: 90px;
+  font-size: 70px;
 }
