@@ -10,8 +10,40 @@
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  top: 0;
+  z-index: 999;
 }
+
+.brand-name {
+  font-family: "Raleway";
+}
+
+.brand-name:hover {
+  color: white;
+}
+
+.pages-home .navbar-wagon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  display: flex;
+  height: 70px;
+  padding: 0px 30px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+
+}
+
+.fa-university{
+  font-size: 30px;
+  color: white;
+}
+
 
 /* Optional class to fix the navbar on top */
 .navbar-wagon-fixed {
@@ -22,9 +54,16 @@
   width: 100%;
 }
 
+
+
 /* Navbar logo */
-.navbar-wagon-brand img {
-  width: 50px;
+.navbar-wagon-brand{
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  img {
+    width: 50px;
+  }
 }
 
 /* Navbar right section (with form, links, button) */
@@ -54,18 +93,18 @@
 /* Navbar right button */
 .navbar-wagon-button {
   margin-left: 10px;
-  padding: 0 20px;
+  padding: 0 12px;
   border-radius: 20em;
   line-height: 40px;
-  background-color: #D23333;
+  background-color: transparent;
   color: white;
   font-size: 14px;
-  border: 2px solid #D23333;
+  border: 1px solid green;
 }
 .navbar-wagon-button:hover {
   color: white;
-  background: #D23333;
-  border-color: #ac2626;
+  background: green;
+  border-color: green;
 }
 
 /* Navbar search form */

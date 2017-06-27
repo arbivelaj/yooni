@@ -1,0 +1,50 @@
+
+
+
+.search-box {
+  color: black;
+
+}
+
+.search-input-field {
+  width: 555px;
+  padding: 5px;
+  border: none;
+}
+
+.btn-search {
+  border-radius: 2px;
+  border: none;
+  padding: 5px;
+  width: 67px;
+  color: white;
+}
+
+.btn-search:hover {
+  opacity: 0.9;
+}
+
+.header-with-lines {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    flex: 0 0 30%;
+    color: grey;
+    font-family: "Raleway"
+  }
+  span {
+    flex: 0 0 30%;
+    border-bottom: 0.3px solid grey;
+  }
+
+  span:first-child {
+    margin-left: 30px;
+  }
+
+  span:last-child {
+    margin-right: 30px;
+  }
+}

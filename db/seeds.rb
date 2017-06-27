@@ -8,7 +8,9 @@ edhec = University.create(
 Our aim is to pass on the keys to business success to new generations of managers and entrepreneurs, spreading the conviction that companies can have a positive impact on the economy and on society as a whole.",
   website: "https://www.edhec.edu" ,
   phone_number: "+33320154482" ,
-  contact: "communication@edhec.edu")
+  contact: "communication@edhec.edu" ,
+  photo: "https://static.pexels.com/photos/443356/pexels-photo-443356.jpeg")
+
 
 hec = University.create(
   name: "HEC Paris",
@@ -16,7 +18,9 @@ hec = University.create(
   description: "HEC Paris’ mission is twofold: training the global leaders of tomorrow, and taking an active part in the production of knowledge on management.",
   website: "https://www.hec.edu" ,
   phone_number: "+33139677000" ,
-  contact: "dircom@hec.fr")
+  contact: "dircom@hec.fr" ,
+  images: "https://static.pexels.com/photos/443356/pexels-photo-443356.jpeg")
+
 
 bocconi = University.create(
   name: "Università Bocconi",

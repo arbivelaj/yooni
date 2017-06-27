@@ -1,0 +1,38 @@
+
+
+.modal-search-questions {
+  color: black;
+}
+
+.modal-header h4 {
+ color: black;
+}
+
+#modal-button {
+  cursor: pointer;
+    display: inline-block;
+    font-family: "Lexia W01 Bold1114982",serif;
+    font-size: .75em;
+    line-height: 1;
+    padding: 1em 1.5625em .9375em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    letter-spacing: .025em;
+    background-color: green;
+    border: none;
+    height: 80px;
+    color: #fff!important;
+    border-radius: 44px;
+    font-family: inherit;
+    font-size: 21px;
+    padding: 28px;
+}
+
+#modal-button:hover {
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,.5);
+}
