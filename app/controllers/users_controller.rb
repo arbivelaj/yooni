@@ -16,7 +16,6 @@ class UsersController < ApplicationController
     # @fields = @favourites.map {|booking| booking.field}
     @user = current_user
     @applications = current_user.applications
-
   end
 
   private

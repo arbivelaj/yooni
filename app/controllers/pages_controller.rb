@@ -12,6 +12,8 @@ class PagesController < ApplicationController
     ber = University.all.select{|x| x.name == "Freie Universität Berlin"}
     @unis << ber.last
 
+    @unis = @unis.select { |i| i }
+
     @hash = Gmaps4rails.build_markers(@unis) do |uni, marker|
 
       marker.lat uni.latitude

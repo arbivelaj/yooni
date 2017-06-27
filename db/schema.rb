@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622140740) do
+ActiveRecord::Schema.define(version: 20170627132757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(version: 20170622140740) do
     t.datetime "updated_at", null: false
     t.index ["program_id"], name: "index_applications_on_program_id", using: :btree
     t.index ["user_id"], name: "index_applications_on_user_id", using: :btree
+  end
+
+  create_table "attachinary_files", force: :cascade do |t|
+    t.string   "attachinariable_type"
+    t.integer  "attachinariable_id"
+    t.string   "scope"
+    t.string   "public_id"
+    t.string   "version"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "format"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
   end
 
   create_table "favourites", force: :cascade do |t|
@@ -37,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170622140740) do
     t.string   "title"
     t.integer  "ranking"
     t.integer  "tuition"
-    t.integer  "scholarship"
+    t.string   "scholarship"
     t.string   "level"
     t.integer  "university_id"
     t.string   "subject"

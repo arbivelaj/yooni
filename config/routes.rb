@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Attachinary::Engine => "/attachinary"
+
   get 'applications/create'
 
   get 'applications/show'

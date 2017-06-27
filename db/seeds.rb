@@ -13,9 +13,14 @@ Our aim is to pass on the keys to business success to new generations of manager
   website: "https://www.edhec.edu",
   phone_number: "+33320154482",
   contact: "communication@edhec.edu",
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498571725/EDHEC_pq5bcy.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498218633/323042463_1280x720_i4zose.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498207156/pexels-photo-235558_oetocf.jpg"])
+=======
+  photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498571725/EDHEC_pq5bcy.jpg"]
+  )
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 
 
@@ -27,9 +32,13 @@ Our aim is to pass on the keys to business success to new generations of manager
   website: "https://www.edhec.edu" ,
   phone_number: "+33320154482" ,
   contact: "communication@edhec.edu" ,
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498208044/finance_hec_q8dp3r.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498209883/StockSnap_CY0BG49341_m1zbvg.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498209978/students-working-on-project_4460x4460_dbevuc.jpg"])
+=======
+  photo_urls: ["https://static.pexels.com/photos/443356/pexels-photo-443356.jpeg"])
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 
 hec = University.create(
@@ -39,9 +48,13 @@ hec = University.create(
   website: "https://www.hec.edu" ,
   phone_number: "+33139677000" ,
   contact: "dircom@hec.fr" ,
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498148004/HEC_Paris_Campus_dhjzdc.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498208089/hec_marketing_i5eedq.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498209881/StockSnap_II8IZ684IW_cryqxm.jpg"])
+=======
+  photo_urls: ["https://static.pexels.com/photos/443356/pexels-photo-443356.jpeg"])
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 
 bocconi = University.create(
@@ -51,9 +64,13 @@ bocconi = University.create(
   website: "https://www.unibocconi.eu",
   phone_number: "+390258363535",
   contact: "inexchange@unibocconi.it",
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498481365/boocccccni_wdqw7b.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498218590/bocconi_residence_irin3x.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498148259/bocconi_finance_n96yra.jpg"])
+=======
+  photo_urls: [" "])
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 esade = University.create(
   name: "ESADE Business School",
@@ -62,9 +79,13 @@ esade = University.create(
   website: "https://www.esade.eu",
   phone_number: "+34932806162" ,
   contact: "esade.madrid@esade.edu",
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498148082/ESADE_business_pzwb9d.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498207825/entrepreneur-593358_1920_runrvd.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498210689/AdobeStock_84819017_pqe9vs.jpg"])
+=======
+  photo_urls: [" "])
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 imperial = University.create(
   name: "Imperial College London",
@@ -73,9 +94,13 @@ imperial = University.create(
   website: "https://www.esade.eu",
   phone_number: "+34932806162",
   contact: "business-school@imperial.ac.uk",
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498218729/imperail_college_aqhhwg.jpg
                 http://res.cloudinary.com/dbk82xjri/image/upload/v1498148039/ImperialCollege_f3sgj8.jpg
                 http://res.cloudinary.com/dbk82xjri/image/upload/v1498209978/crowd-participating-at-event_4460x4460_vyagyb.jpg"])
+=======
+  photo_urls: [" "])
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 bologna = University.create(
   name: "University of Bologna",
@@ -84,9 +109,13 @@ bologna = University.create(
   website: "https://www.unibo.it",
   phone_number: "+390512099349",
   contact: "urp@unibo.it",
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498207648/Milan_sywld7.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498207021/pexels-photo-267885_qnyqrp.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498208743/StockSnap_MPU1111YLS_nuddyk.jpg"])
+=======
+  photo_urls: [" "])
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 berlin = University.create(
   name: "Freie Universität Berlin",
@@ -95,9 +124,13 @@ berlin = University.create(
   website: "https://www.fu-berlin.de",
   phone_number: "+493083870000",
   contact: "info-service@fu-berlin.de",
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498218666/FREIE_CAMPUS_gbqkbv.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498207834/startup-849805_1920_b8wwge.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498208916/StockSnap_JA1F4AB58M_lq1bx5.jpg"])
+=======
+  photo_urls: [" "])
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 
 amsterdam = University.create(
@@ -107,9 +140,13 @@ amsterdam = University.create(
   website: "https://www.uva.nl",
   phone_number: "+31205259111",
   contact: "servicedesk-ac@uva.nl",
+<<<<<<< HEAD
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498207963/uni_of_amsterd-science_qpm53p.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498207841/uni_of_amsterdam_t7mucn.jpg
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498209975/university-study-group_4460x4460_uej8hx.jpg"])
+=======
+  photo_urls: [" "])
+>>>>>>> c72b2f0465408e1a79650078c8552a4270c25add
 
 
 

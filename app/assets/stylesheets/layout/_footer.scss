@@ -1,5 +1,7 @@
 // Your footer style
 
+
+
 .full {
     width: 100%;
 }
@@ -12,9 +14,9 @@
 .footer {
   background: #E3E3E3;
   height: auto;
-  padding-bottom: 30px;
-  position: relative;
-  width: 100%;
+  padding-bottom: 0px;
+  // position: absolute;
+  // width: 1140px;
   border-bottom: 1px solid #CCCCCC;
   border-top: 1px solid #DDDDDD;
 }
@@ -26,12 +28,24 @@
 }
 .footer h3 {
   border-bottom: 1px solid #BAC1C8;
-  color: #54697E;
-  font-size: 18px;
+  color: green;
+  font-size: 14px;
   font-weight: 600;
   line-height: 27px;
-  padding: 40px 0 10px;
+  padding: 20px 0 10px;
   text-transform: uppercase;
+  margin-top: -10px;
+}
+
+.footer h2 {
+
+  color: green;
+
+  font-weight: 600;
+  line-height: 27px;
+  padding: 20px 0 10px;
+  text-transform: uppercase;
+  margin-top: -10px;
 }
 .footer ul {
   font-size: 13px;
@@ -134,4 +148,10 @@
 }
 .payments {
   font-size: 1.5em;
+}
+
+#logo-footer {
+  padding-top: 20px;
+  color: green;
+  font-size: 70px;
 }
