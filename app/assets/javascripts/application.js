@@ -5,6 +5,7 @@
 
 //= require underscore
 //= require gmaps/google
+//= profile
 //= require_tree .
 
 var items = ["management", "politics", "economics", "master", "bachelor", "bocconi", "science", "engineering"]
