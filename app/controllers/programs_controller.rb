@@ -44,7 +44,8 @@ class ProgramsController < ApplicationController
     elsif params[:search_value]
       # Run classic search with value only
       @pippo = Program.search(params[:search_value]).select do |program|
-        program.university and program.university.latitude and program.university.longitude
+        true
+        # program.university and program.university.latitude and program.university.longitude
       end
 
       @list = @pippo.map { |p| p.university }

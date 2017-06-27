@@ -1,4 +1,9 @@
-
+Application.destroy_all
+University.destroy_all
+Program.destroy_all
+Favourite.destroy_all
+Review.destroy_all
+User.destroy_all
 
 edhec = University.create(
   name: "Edhec Business School",
