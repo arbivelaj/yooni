@@ -1,7 +1,7 @@
 /* Main class */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  background: #504d4d;
   transition: all 0.3s ease;
   display: flex;
   height: 70px;
@@ -38,6 +38,8 @@
   z-index: 999;
 
 }
+
+
 
 .fa-university{
   font-size: 30px;
@@ -91,7 +93,7 @@
 }
 
 /* Navbar right button */
-.navbar-wagon-button {
+.pages-home .navbar-wagon-button {
   margin-left: 10px;
   padding: 0 12px;
   border-radius: 20em;
@@ -100,13 +102,31 @@
   color: white;
   font-size: 14px;
   border: 1px solid green;
+  width: 113px;
 }
-.navbar-wagon-button:hover {
+.pages-home .navbar-wagon-button:hover {
   color: white;
   background: green;
   border-color: green;
 }
 
+.navbar-wagon-button {
+    color: white;
+  background: green;
+  border-color: green;
+  margin-left: 10px;
+  padding: 0 12px;
+  border-radius: 20em;
+  line-height: 40px;
+  font-size: 14px;
+  border: 1px solid green;
+  width: 113px;
+}
+
+.navbar-wagon-button:hover {
+    background-color: transparent;
+    color: white;
+}
 /* Navbar search form */
 .navbar-wagon-search {
   flex: 0 1 300px;
