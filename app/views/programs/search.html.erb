@@ -3,10 +3,13 @@
  <!-- Main Content -->
 <div class="container-fluid">
   <div class="side-body">
+   <div id="map" style="width: 100%; height: 300px; float: right; center"></div>
 
-   <%= render "content_search", programs: @pippo %>
+      <%= render "content_search", programs: @pippo %>
 
-   <div id="map" style="width: 100%; height: 600px; float: right;"></div>
+
+
+
 
    <% content_for(:after_js) do %>
      <%= javascript_tag do %>
@@ -16,6 +19,7 @@
          markers = handler.addMarkers(<%= raw @hash.to_json %>);
          handler.bounds.extendWith(markers);
          handler.fitMapToBounds();
+         handler.map.centerOn([52.000000, 4.000000]);
          if (markers.length == 0) {
          handler.getMap().setZoom(2);
        } else if (markers.length == 1) {
