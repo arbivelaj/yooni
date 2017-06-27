@@ -1,19 +1,19 @@
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-  <% programs.each do |program| %>
-
-
-<div class="col-xs-4">
-    <%= render 'card', program: program %>
-
-
-</div>
-  <% end %>
+<div class="container" id="map-button-container">
+  <div class="line"></div>
+  <div class="map-button">
+    <%= link_to 'View Map', '#', id: 'view_map', class: "view-map" %>
+  </div>
+  <div class="line"></div>
 </div>
 
-
-
+<div class="row">
+  <div class="col-xs-12">
+    <% programs.each do |program| %>
+    <div class="col-xs-4">
+      <%= render 'card', program: program %>
+    </div>
+    <% end %>
+  </div>
 </div>
+
 </div>

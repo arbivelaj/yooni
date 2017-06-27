@@ -1,8 +1,24 @@
-<%= link_to program_path(program), class: "card-link" do%>
-  <div class="card m-button">
-  <br>
-  <h3 class="text-center letter-spacing" style="margin-top: 0px";><%= program.title  %></h3>
-  <p class="text-center "><%= program.subject %></p>
-  <p class="text-center"><%= $ program.tuition %></p>
-  </div>
-<% end %>
+<!-- <div class="container">
+  <div class="row"> -->
+    <div class="card-program card m-button">
+      <%= link_to program_path(program), class: "card-link" do%>
+        <div class="">
+          <div>
+            <br>
+            <h3 class="text-center letter-spacing" style="margin-top: 0px";><%= program.title  %></h3>
+
+          </div>
+        </div>
+      <% end %>
+
+          <div class="card-footer col-xs-6">
+            <p class="text-center text-footer">Subject
+            <br>
+            <strong><span class="span-footer"><%= program.subject %></strong></span></p>
+            <br>
+            <div class="verticalLine"></div>
+            <p class="text-center text-footer">Tuition<br><strong><span class="span-footer">$<%= program.tuition %></strong></span></p>
+          </div>
+    </div>
+<!--   </div>
+</div> -->
