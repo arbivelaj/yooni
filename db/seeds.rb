@@ -1,3 +1,20 @@
+University.destroy_all
+Program.destroy_all
+Favourite.destroy_all
+Application.destroy_all
+Review.destroy_all
+User.destroy_all
+
+edhec = University.create(
+  name: "Edhec Business School",
+  location: "16-18 Rue du 4 Septembre, 75002 Paris, France",
+  description: "Created by and for entrepreneurs, EDHEC has embodied the fundamental values of business for over a century.
+Our aim is to pass on the keys to business success to new generations of managers and entrepreneurs, spreading the conviction that companies can have a positive impact on the economy and on society as a whole.",
+  website: "https://www.edhec.edu",
+  phone_number: "+33320154482",
+  contact: "communication@edhec.edu",
+  photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498571725/EDHEC_pq5bcy.jpg"]
+  )
 
 
 
@@ -19,7 +36,7 @@ hec = University.create(
   website: "https://www.hec.edu" ,
   phone_number: "+33139677000" ,
   contact: "dircom@hec.fr" ,
-  images: "https://static.pexels.com/photos/443356/pexels-photo-443356.jpeg")
+  photos: "https://static.pexels.com/photos/443356/pexels-photo-443356.jpeg")
 
 
 bocconi = University.create(
@@ -71,6 +88,9 @@ amsterdam = University.create(
   phone_number: "+31205259111",
   contact: "servicedesk-ac@uva.nl"
   )
+
+
+#================================
 
 management = Program.create(
   title: "Master in Management",
