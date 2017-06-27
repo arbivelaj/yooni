@@ -21,7 +21,8 @@ gem "coffee-rails"
 gem "gmaps4rails"
 gem 'omniauth-facebook'
 gem 'cloudinary'
-
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"

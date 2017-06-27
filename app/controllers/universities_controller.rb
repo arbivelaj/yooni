@@ -5,4 +5,10 @@ class UniversitiesController < ApplicationController
 
   def index
   end
+
+
+def university_params
+  params.require(:university).permit(:name, :description, photos: [])
+end
+
 end
