@@ -30,7 +30,8 @@ class ProgramsController < ApplicationController
     query = {}
 
     if params[:search_value].nil?
-      # Run the modal search
+      # Run the modal sear
+
       @pippo = Program.search_modal(params[:subject], params[:level], params[:location], params[:tuition].to_i, params[:scholarship].to_i)
       @list = @pippo.map { |p| p.university }
 
