@@ -54,8 +54,8 @@ ActiveRecord::Schema.define(version: 20170627132757) do
     t.integer  "tuition"
     t.integer  "scholarship"
     t.string   "level"
-    t.string   "subject"
     t.integer  "university_id"
+    t.string   "subject"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["university_id"], name: "index_programs_on_university_id", using: :btree
