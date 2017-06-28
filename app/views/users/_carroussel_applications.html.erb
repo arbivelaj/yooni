@@ -17,16 +17,16 @@
       url('<%= cl_image_path application.program.university.photos.first.path, width: 1160, height: 730 %>'); height: 70vh; background-size: cover; background-position: center center; ">
       <!-- ADD program.university.images -->
       <div class="carousel-caption" style="bottom: 235px; position: absolute; top: 10px; left: 10px">
-        <div class="program-title">
-          <h3>You applied to the program <b><%= application.program.title %></b></h3>
+        <div class="program-title" style="text-align: center; padding-left: 250px;">
+          <h2>You applied to <b><%= application.program.title %></b></h2>
         </div>
-        <div class="program-university">
+        <div class="program-university" style="text-align: center; padding-left: 250px;">
           <h4><b>At </b><%= application.program.university.name %></h4>
         </div>
-        <div class="program-creation">
+        <div class="program-creation" style="text-align: center; padding-left: 250px;">
           <p><b>On </b><%= application.created_at%></p>
         </div>
-        <div class="program-university-location">
+        <div class="program-university-location" style="text-align: center; padding-left: 250px;">
           <p><b>Address: </b><%= application.program.university.location %></p>
         </div>
       </div>
