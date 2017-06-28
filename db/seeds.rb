@@ -18,7 +18,7 @@ Our aim is to pass on the keys to business success to new generations of manager
 
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498208044/finance_hec_q8dp3r.jpg",
               "http://res.cloudinary.com/dbk82xjri/image/upload/v1498209883/StockSnap_CY0BG49341_m1zbvg.jpg",
-              "http://res.cloudinary.com/dbk82xjri/image/upload/v1498209978/students-working-on-project_4460x4460_dbevuc.jpg"])
+               "http://res.cloudinary.com/dbk82xjri/image/upload/v1498209978/students-working-on-project_4460x4460_dbevuc.jpg"])
 
 
 
