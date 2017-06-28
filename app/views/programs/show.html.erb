@@ -20,12 +20,12 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-3">
+  <div class="container" style="width: 1378px; margin-bottom: 20px; margin-top: 93px; background-color: rgba(128, 128, 128, 0.1)">
+    <div class="row text-center" style="margin-top: 30px">
+      <div class="col-xs-3 favourite-block">
         <div class="card-program" style="width: 20rem;">
           <div class="card-block">
-            <p class="card-text">Are you interested in this program?</p>
+            <p class="card-text" style="color: grey ">Are you interested in this program?</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
@@ -50,10 +50,10 @@
           </li>
           <li class="list-group-item">
             <div class="">
-            <% if current_user %>
+              <% if current_user %>
               <% @user = current_user %>
               <%= link_to " My Favourites", user_profile_path(@user), :class => "fa fa-flag" %>
-            <% end %>
+              <% end %>
 
             </div>
           </li>
@@ -78,7 +78,7 @@
       <% end %>
 
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-6" style="color: #6d6b6b">
 
 
       <h1><b><%= @program.title %></h1></b>
@@ -86,14 +86,14 @@
       <%= @program.university.location %>
     </div>
     <div class="col-xs-3">
-      <li class="list-group-item">      <% if params[:notice] %>
+      <li class="list-group-item" style="background-color: rgba(128, 128, 128, -0.98); border: none">      <% if params[:notice] %>
         <div role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <% arbi = "Already applied" %>
           <%= arbi %>
         </div>
         <% else %>
-        <button data-toggle="modal" class="btn btn-success" data-target="#apply">Apply</button>
+        <button data-toggle="modal" class="btn btn-apply" data-target="#apply">Apply</button>
         <div class="modal modal-apply text-center fade" id="apply">
           <div class="modal-content">
             <div class="modal-header">
@@ -130,14 +130,14 @@
     </div> <!-- first-row -->
 
 
-    <div class="row">
+    <div class="row text-center">
 
       <div class="col-md-3" style="font-size: 21px;">
         <div class="fb-share-button" data-href="https://yooni.herokuapp.com" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyooni.herokuapp.com%2F&amp;src=sdkpreparse">Share</a></div>
 
       </div>
 
-      <div class="col-md-6" style="font-size: 21px;">
+      <div class="col-md-6" style="font-size: 21px; color: grey">
 
 
        <%= @program.university.description %>
@@ -154,39 +154,44 @@
 
      </div>
 
-     <div class="col-md-3", style="margin-top: -94px;">
-       <h3>
+     <div class="col-md-3 banner-ranking">
+       <h2>
         <b>
-          Ranking
+          #<%= @program.ranking %>
         </b>
-        <br>
-        #<%= @program.ranking %>
-      </h3>
+      </h2>
+
+      <h4 class="banner-content-margin">
+        Ranking
+      </h4>
 
       <h3>
         <b>
-          Subject
+          <%= @program.subject %>
         </b>
-        <br>
-        <%= @program.subject %>
       </h3>
+      <h4 class="banner-content-margin">
+        Subject
+      </h4>
 
       <h3>
         <b>
-          Tuition Fees
+          <%= @program.tuition %>$
         </b>
-        <br>
-        <%= @program.tuition %>$
-      </h3>
+        </h3>
+       <h4 class="banner-content-margin">
+        Tuition Fees
+      </h4>
 
 
       <h3>
         <b>
-          Scholarship Opportunities
+          <%= @program.scholarship %>$
         </b>
-        <br>
-        <%= @program.scholarship %>$
-      </h3>
+        </h3>
+        <h4 class="banner-content-margin">
+        Scholarship Opportunities
+      </h4>
 
     </div>
 
@@ -208,13 +213,14 @@
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" style="height: 370px; margin-bottom: 30px; margin-top: 30px" role="listbox">
-    <div class="item active">
+  <div class="carousel-inner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+  url('<%= cl_image_path @program.university.photos.first.path, height: 300, width: 400, crop: :fill %>'); height: 600px; margin-bottom: 30px; margin-top: 30px" role="listbox">
+<!--     <div class="item active">
       <img src="https://static.pexels.com/photos/192650/pexels-photo-192650.jpeg">
     </div>
     <div class="item">
       <img src="https://static.pexels.com/photos/192650/pexels-photo-192650.jpeg" alt="...">
-    </div>
+    </div> -->
 
   </div>
 
