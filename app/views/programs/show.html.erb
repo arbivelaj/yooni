@@ -20,7 +20,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  <div class="container" style="width: 1378px; margin-bottom: 20px; margin-top: 93px; background-color: rgba(128, 128, 128, 0.1)">
+  <div class="container-fluid" style="width: 1378px; margin-bottom: 20px; margin-top: 93px; background-color: rgba(128, 128, 128, 0.1)">
     <div class="row text-center" style="margin-top: 30px">
       <div class="col-xs-3 favourite-block">
         <div class="card-program" style="width: 20rem;">
@@ -78,6 +78,7 @@
       <% end %>
 
     </div>
+
     <div class="col-xs-6" style="color: #6d6b6b">
 
 
@@ -213,14 +214,12 @@
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-  url('<%= cl_image_path @program.university.photos.first.path, height: 300, width: 400, crop: :fill %>'); height: 600px; margin-bottom: 30px; margin-top: 30px" role="listbox">
-<!--     <div class="item active">
-      <img src="https://static.pexels.com/photos/192650/pexels-photo-192650.jpeg">
+  <div class="carousel-inner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));" role="listbox">
+  <% @program.university.photos.each_with_index do |thing, index| %>
+      <div class="item <%= "active" if index.zero? %>">
+      <img style="width: 100%; height: auto" src="<%= cl_image_path thing.path, width: 1000, height: 500, crop: :fill %>" alt="">
     </div>
-    <div class="item">
-      <img src="https://static.pexels.com/photos/192650/pexels-photo-192650.jpeg" alt="...">
-    </div> -->
+  <% end %>
 
   </div>
 
