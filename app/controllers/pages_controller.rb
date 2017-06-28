@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
+
+
     @unis = []
     bocco = University.all.select{|x| x.name == "Università Bocconi"}
     @unis << bocco.last
@@ -13,6 +15,8 @@ class PagesController < ApplicationController
     @unis << ber.last
 
     @unis = @unis.select { |i| i }
+
+    raise
 
     @hash = Gmaps4rails.build_markers(@unis) do |uni, marker|
 
