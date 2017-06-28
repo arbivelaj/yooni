@@ -31,6 +31,7 @@ class ProgramsController < ApplicationController
     @tuition = [1000, 5000, 10000, 50000]
     @subject = %w(Economics Management Mathematics Computer Finance Media Politics Actuarial Engineering Markeking Law Biology )
     @scholarship = [0, 1000, 5000, 10000]
+    @hidden = true
     query = {}
 
     if params[:search_value].nil?
