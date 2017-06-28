@@ -16,7 +16,6 @@ class PagesController < ApplicationController
 
     @unis = @unis.select { |i| i }
 
-    raise
 
     @hash = Gmaps4rails.build_markers(@unis) do |uni, marker|
 
