@@ -1,7 +1,7 @@
+Application.destroy_all
 University.destroy_all
 Program.destroy_all
 Favourite.destroy_all
-Application.destroy_all
 Review.destroy_all
 User.destroy_all
 
@@ -28,6 +28,7 @@ Our aim is to pass on the keys to business success to new generations of manager
   website: "https://www.edhec.edu" ,
   phone_number: "+33320154482" ,
   contact: "communication@edhec.edu" ,
+
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498208044/finance_hec_q8dp3r.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498209883/StockSnap_CY0BG49341_m1zbvg.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498209978/students-working-on-project_4460x4460_dbevuc.jpg"])
@@ -53,6 +54,7 @@ bocconi = University.create(
   website: "https://www.unibocconi.eu",
   phone_number: "+390258363535",
   contact: "inexchange@unibocconi.it",
+
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498481365/boocccccni_wdqw7b.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498218590/bocconi_residence_irin3x.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498148259/bocconi_finance_n96yra.jpg"])
@@ -64,9 +66,11 @@ esade = University.create(
   website: "https://www.esade.eu",
   phone_number: "+34932806162" ,
   contact: "esade.madrid@esade.edu",
+
   photo_urls: ['http://res.cloudinary.com/dbk82xjri/image/upload/v1498148082/ESADE_business_pzwb9d.jpg',
               'http://res.cloudinary.com/dbk82xjri/image/upload/v1498207825/entrepreneur-593358_1920_runrvd.jpg',
                'http://res.cloudinary.com/dbk82xjri/image/upload/v1498210689/AdobeStock_84819017_pqe9vs.jpg'])
+
 
 imperial = University.create(
   name: "Imperial College London",
@@ -75,9 +79,11 @@ imperial = University.create(
   website: "https://www.esade.eu",
   phone_number: "+34932806162",
   contact: "business-school@imperial.ac.uk",
+
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498218729/imperail_college_aqhhwg.jpg,
                 http://res.cloudinary.com/dbk82xjri/image/upload/v1498148039/ImperialCollege_f3sgj8.jpg,
                 http://res.cloudinary.com/dbk82xjri/image/upload/v1498209978/crowd-participating-at-event_4460x4460_vyagyb.jpg"])
+
 
 bologna = University.create(
   name: "University of Bologna",
@@ -86,9 +92,11 @@ bologna = University.create(
   website: "https://www.unibo.it",
   phone_number: "+390512099349",
   contact: "urp@unibo.it",
+
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498207648/Milan_sywld7.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498207021/pexels-photo-267885_qnyqrp.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498208743/StockSnap_MPU1111YLS_nuddyk.jpg"])
+
 
 berlin = University.create(
   name: "Freie Universität Berlin",
@@ -97,9 +105,11 @@ berlin = University.create(
   website: "https://www.fu-berlin.de",
   phone_number: "+493083870000",
   contact: "info-service@fu-berlin.de",
+
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498218666/FREIE_CAMPUS_gbqkbv.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498207834/startup-849805_1920_b8wwge.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498208916/StockSnap_JA1F4AB58M_lq1bx5.jpg"])
+
 
 
 amsterdam = University.create(
@@ -109,9 +119,11 @@ amsterdam = University.create(
   website: "https://www.uva.nl",
   phone_number: "+31205259111",
   contact: "servicedesk-ac@uva.nl",
+
   photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498207963/uni_of_amsterd-science_qpm53p.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498207841/uni_of_amsterdam_t7mucn.jpg,
               http://res.cloudinary.com/dbk82xjri/image/upload/v1498209975/university-study-group_4460x4460_uej8hx.jpg"])
+
 
 
 
@@ -124,8 +136,7 @@ management = Program.create(
   scholarship: 1181,
   level: "Master",
   university: hec,
-  subject: "Management",
-  photo_urls: [" "])
+  subject: "Management")
 
 
 management2 = Program.create(
@@ -135,9 +146,7 @@ management2 = Program.create(
   scholarship: 5000,
   level: "Master",
   university: edhec,
-  subject: "Management",
-  photo_urls: [" "])
-
+  subject: "Management")
 finance = Program.create(
   title: "Master in International Finance",
   ranking: 2,
@@ -145,9 +154,7 @@ finance = Program.create(
   scholarship: 1181,
   level: "Master",
   university: hec,
-  subject: "Finance",
-  photo_urls: [" "])
-
+  subject: "Finance")
 finance2 = Program.create(
   title: "Master in Finance",
   ranking: 1,
@@ -155,8 +162,7 @@ finance2 = Program.create(
   scholarship: 5000,
   level: "Master",
   university: edhec,
-  subject: "Finance",
-  photo_urls: [" "])
+  subject: "Finance")
 
 media = Program.create(
   title: "Bachelor's in Media and Information",
@@ -165,8 +171,7 @@ media = Program.create(
   scholarship: 6000,
   level: "Bachelor",
   university: amsterdam,
-  subject: "Media",
-  photo_urls: [" "])
+  subject: "Media")
 
 media2 = Program.create(
   title: "Bachelor's in Media and Information",
@@ -175,8 +180,7 @@ media2 = Program.create(
   scholarship: 6000,
   level: "Bachelor",
   university: bocconi,
-  subject: "Media",
-  photo_urls: [" "])
+  subject: "Media")
 
 
 politics = Program.create(
@@ -186,8 +190,7 @@ politics = Program.create(
   scholarship: 6000,
   level: "Bachelor",
   university: amsterdam,
-  subject: "Politics",
-  photo_urls: [" "])
+  subject: "Politics")
 
 economics = Program.create(
   title: "Bachelor's in Economics",
@@ -196,8 +199,7 @@ economics = Program.create(
   scholarship: 6000,
   level: "Bachelor",
   university: amsterdam,
-  subject: "Economics",
-  photo_urls: [" "])
+  subject: "Economics")
 
 # Feed it bwoy!
 
@@ -208,8 +210,7 @@ science = Program.create(
   scholarship: 18000,
   level: "Bachelor",
   university: amsterdam,
-  subject: "Actuarial",
-  photo_urls: [" "])
+  subject: "Actuarial")
 
 engineering = Program.create(
   title: "Bachelor's in Design Engineering",
@@ -218,8 +219,7 @@ engineering = Program.create(
   scholarship: 5000,
   level: "Bachelor",
   university: imperial,
-  subject: "Engineering",
-  photo_urls: [" "])
+  subject: "Engineering")
 
 computer1 = Program.create(
   title: "Bachelor's in Computing Artificial Intelligence",
@@ -228,8 +228,7 @@ computer1 = Program.create(
   scholarship: 5000,
   level: "Bachelor",
   university: imperial,
-  subject: "computer science",
-  photo_urls: [" "])
+  subject: "computer science")
 
 business = Program.create(
   title: "Executive MBA",
@@ -238,8 +237,7 @@ business = Program.create(
   scholarship: 8500,
   level: "MBA",
   university: edhec,
-  subject: "Management",
-  photo_urls: [" "])
+  subject: "Management")
 
 business2 = Program.create(
   title: "Full time MBA",
@@ -248,8 +246,7 @@ business2 = Program.create(
   scholarship: 8500,
   level: "MBA",
   university: esade,
-  subject: "Management",
-  photo_urls: [" "])
+  subject: "Management")
 
 business3 = Program.create(
   title: "Full time MBA",
@@ -258,8 +255,7 @@ business3 = Program.create(
   scholarship: 8500,
   level: "MBA",
   university: esade,
-  subject: "Management",
-  photo_urls: [" "])
+  subject: "Management")
 
 marketing2 = Program.create(
   title: "Integrated marketing for the digital world",
@@ -268,8 +264,7 @@ marketing2 = Program.create(
   scholarship: 1181,
   level: "Master",
   university: hec,
-  subject: "Marketing",
-  photo_urls: [" "])
+  subject: "Marketing")
 
 business4 = Program.create(
   title: "Bachelor of Business Administration",
@@ -278,8 +273,7 @@ business4 = Program.create(
   scholarship: 7600,
   level: "Bachelor",
   university: esade,
-  subject: "Management",
-  photo_urls: [" "])
+  subject: "Management")
 
 law = Program.create(
   title: "Bachelor in Law",
@@ -288,8 +282,7 @@ law = Program.create(
   scholarship: 7600,
   level: "Bachelor",
   university: esade,
-  subject: "Law",
-  photo_urls: [" "])
+  subject: "Law")
 
 finance3 = Program.create(
   title: "Executive Master in Finance",
@@ -298,8 +291,7 @@ finance3 = Program.create(
   scholarship: 8000,
   level: "Master",
   university: bocconi,
-  subject: "Finance",
-  photo_urls: [" "])
+  subject: "Finance")
 
 management3 = Program.create(
   title: "Executive MBA",
@@ -308,8 +300,7 @@ management3 = Program.create(
   scholarship: 30000,
   level: "MBA",
   university: bocconi,
-  subject: "Management",
-  photo_urls: [" "])
+  subject: "Management")
 
 medicine = Program.create(
   title: "Medical Biotechnology",
@@ -318,8 +309,7 @@ medicine = Program.create(
   scholarship: 11000,
   level: "Master",
   university: bologna,
-  subject: "Biology",
-  photo_urls: [" "])
+  subject: "Biology")
 
 biology = Program.create(
   title: "Bioinformatics",
@@ -328,8 +318,7 @@ biology = Program.create(
   scholarship: 11000,
   level: "Master",
   university: bologna,
-  subject: "Biology",
-  photo_urls: [" "])
+  subject: "Biology")
 
 sociology = Program.create(
   title: "Data Science",
@@ -338,8 +327,7 @@ sociology = Program.create(
   scholarship: 11000,
   level: "Master",
   university: bologna,
-  subject: "Economics",
-  photo_urls: [" "])
+  subject: "Economics")
 
 engineering2 = Program.create(
   title: "Chemical Engineering",
@@ -348,8 +336,7 @@ engineering2 = Program.create(
   scholarship: 5000,
   level: "Bachelor",
   university: imperial,
-  subject: "Economics",
-  photo_urls: [" "])
+  subject: "Economics")
 
 biology = Program.create(
   title: "Biochemistry",
@@ -358,8 +345,7 @@ biology = Program.create(
   scholarship: 5000,
   level: "Bachelor",
   university: imperial,
-  subject: "Biology",
-  photo_urls: [" "])
+  subject: "Biology")
 
 engineering3 = Program.create(
   title: "Aeronautical Engineering",
@@ -368,8 +354,7 @@ engineering3 = Program.create(
   scholarship: 5000,
   level: "Bachelor",
   university: imperial,
-  subject: "Engineering",
-  photo_urls: [" "])
+  subject: "Engineering")
 
 engineering4 = Program.create(
   title: "Materials Science and Engineering",
@@ -378,5 +363,4 @@ engineering4 = Program.create(
   scholarship: 5000,
   level: "Bachelor",
   university: imperial,
-  subject: "Engineering",
-  photo_urls: [" "])
+  subject: "Engineering")
