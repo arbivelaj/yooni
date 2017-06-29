@@ -41,7 +41,8 @@
       </div>
     </div>
 
-    <%= link_to t(".top_call_to_action", default: "Sign Out"), destroy_user_session_path , class: "navbar-wagon-item navbar-wagon-button btn", method: :delete %>
+
+    <%= link_to t(".top_call_to_action", default: "Sign Out"), destroy_user_session_path, method: :delete , class: "navbar-wagon-item navbar-wagon-button btn" %>
 
     <% else %>
 

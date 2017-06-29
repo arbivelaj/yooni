@@ -1,46 +1,70 @@
-<div id="myCarousel<%= number %>" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <% favourites.each_with_index do |application, index| %>
-    <% if index.zero? %>
-    <li data-target="#myCarousel" data-slide-to="<%= index %>" class="active"></li>
-    <% else %>
-    <li data-target="#myCarousel" data-slide-to="<%= index %>"></li>
-    <% end %>
-    <% end %>
-  </ol>
-  <!-- Wrapper for slides -->
- <!--  -->
-  <div class="carousel-inner" style="height: 70vh; margin-top: 30px; margin-bottom: 50px; background-position: center;  position: relative">
-    <% favourites.each_with_index do |favourite, index| %>
-    <div class="item <%= "active" if index.zero? %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-      url('<%= cl_image_path favourite.university.photos.first.path, width: 1160, height: 730 %>'); height: 70vh; background-size: cover; background-position: center center; ">
-      <!-- ADD program.university.images -->
-      <div class="carousel-caption" style="bottom: 235px; position: absolute; top: 10px; left: 10px">
-        <div class="program-title" style="text-align: center; padding-left: 250px;">
-          <h3>You saved the program <b><%= favourite.title %></b></h3>
-        </div>
-        <div class="program-university" style="text-align: center; padding-left: 250px;">
-          <h4><b>At </b><%= favourite.university.name %></h4>
-        </div>
-        <div class="program-creation" style="text-align: center; padding-left: 250px;">
-          <p><b>On </b><%= favourite.created_at%></p>
-        </div>
-        <div class="program-university-location" style="text-align: center; padding-left: 250px;">
-          <p><b>Address: </b><%= favourite.university.location %></p>
-        </div>
-      </div>
-    </div>
-    <% end %>
+<style>
+.cardF {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  margin-top: 20px;
+  margin-right: 150px;
+  margin-left: 150px;
+  border-radius: 2px;
+}
+.card-userF {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.card-categoryF {
+position: absolute;
+    top: 10px;
+    left: 650px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.card-descriptionF {
+  position: absolute;
+  bottom: 4px;
+  left: 29px;
+  text-align: justify;
+
+}
+.card-descriptionF h2 {
+  font-size: 24px;
+}
+.card-descriptionF p {
+  font-size: 13px;
+}
+.card-linkF {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-linkF:hover {
+  opacity: 0.1;
+}
+
+
+
+</style>
+
+
+
+<!-- card first trial -->
+<% favourites.each_with_index do |favourite, index| %>
+<div class="cardF" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path favourite.university.photos.first.path %>'); margin-bottom: 20px; background-position: center;">
+  <div class="card-categoryF">You saved the program <b><%= favourite.title %></b></div>
+  <div class="card-descriptionF">
+    <h2><b>At </b><%= favourite.university.name %></h2>
+    <p><b>Address: </b><%= favourite.university.location %></p>
+    <p><b>On </b><%= favourite.created_at%></p>
+
   </div>
-
-
-  <a class="left carousel-control" href="#myCarousel<%= number %>" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel<%= number %>" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
+  <a class="card-linkF" href="#" ></a>
 </div>
+<% end %>
