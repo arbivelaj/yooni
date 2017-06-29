@@ -4,7 +4,7 @@ class ApplicationsController < ApplicationController
     @program = Program.find(params[:program_id])
     @application = Application.new
     if @application.save
-    redirect_to user_profile(@user)
+      redirect_to user_profile(@user)
     end
   end
 
@@ -13,6 +13,4 @@ class ApplicationsController < ApplicationController
 
   def index
   end
-
-
 end

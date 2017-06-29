@@ -2,17 +2,13 @@ class ProgramsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:search, :show]
 
   def show
-
     @review = Review.new
-
-    if current_user
-      if params[:notice]
-        application = Application.create(user: current_user, program_id: params[:id])
-      end
-    end
-
-
     @program = Program.find(params[:id])
+    if params[:notice]
+      application = Application.new(user: current_user)
+      application.program = @program
+      flash[:notice] = "Succesfully applied to #{@program.title}"
+    end
   end
 
   def index
