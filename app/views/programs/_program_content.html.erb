@@ -1,0 +1,13 @@
+<div class="content-card">
+  <h1><strong><%= @program.title %></h1></strong>
+  <h2><%= @program.university.name %></h2>
+  <div class="location">
+    <i class="fa fa-map-marker"></i>
+    <%= @program.university.location %>
+  </div>
+  <p class="description">
+    <%= @program.university.description %>
+  </p>
+</div>
+
+<%= render partial: "carrousel_program_show", locals: { program: @program } %>

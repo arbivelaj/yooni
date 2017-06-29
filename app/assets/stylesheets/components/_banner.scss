@@ -6,7 +6,7 @@
 .banner {
   color: white;
   text-align: center;
-  height: 810px;
+  height: 680px;
 
   background-size: cover !important;
   display: flex;
@@ -14,13 +14,17 @@
   justify-content: center;
 }
 .banner h1 {
-  font-size: 150px;
+  font-size: 90px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  letter-spacing: 7px;
+
 }
 .banner p {
   font-size: 18px;
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  padding-top: 12px;
+  letter-spacing: 0.5px;
 }

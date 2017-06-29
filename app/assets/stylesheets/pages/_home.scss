@@ -27,7 +27,7 @@
   opacity: 0.7;
   position: relative;
   background-color: #f8f8f8;
-  // margin-bottom: 20px;
+  margin-bottom: 20px;
   margin-top: 20px;
   border: 1px solid #e7e7e7;
   transition: box-shadow 800ms ease;
@@ -87,20 +87,38 @@
   transition: opacity 2s;
 }
 
+.btn-map{
+  border: 1px solid green;
+  background-color:transparent;
+  border-radius:20px;
+  width:100px;
+  border-radius: 100px;
+  width: 120px;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: green;
+    -webkit-transition: all .2s ease-in;
+  }
+}
+
 .view-map{
   text-align: center;
   display: block;
   text-decoration: none;
-  color: green;
-  &:hover {
-    color: #333;
-    text-decoration: none;
-  }
+  color: gray;
+  margin-top:10px;
+  // &:hover {
+  //   color: #333;
+  //   text-decoration: none;
+  //   border: 1px solid green;
+  //   background-color:transparent;
+  // }
 }
 
 .line {
   height: 1px;
-  background-color: #aba4a4;
+  background-color: rgba(119,119,119,0.23);
   width: 40%;
   margin-top: 20px;
 }
@@ -127,7 +145,7 @@
 }
 
 .verticalLine {
-  border-left: 1px solid;
+  border-left: 1px dotted;
   border-color:rgba(119, 119, 119, 0.3);
 }
 
