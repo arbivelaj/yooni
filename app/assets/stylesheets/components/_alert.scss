@@ -6,6 +6,11 @@
   margin: 0;
   text-align: center;
   color: white;
+  border: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
 }
 .alert-info {
   background: $green;
