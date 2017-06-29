@@ -1,0 +1,29 @@
+.apply-card {
+  background-color: white;
+  padding: 20px;
+  ul {
+    padding-left: 0;
+    li {
+      list-style: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: baseline;
+      padding-left: 10px;
+      border-top: 1px solid gainsboro;
+      border-bottom: 1px solid gainsboro;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h4 {
+        font-weight: 600;
+      }
+      strong {
+        color: #b5b5b5;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="apply-card">
+  <button data-toggle="modal" class="btn btn-apply" data-target="#apply">Apply</button>
+  <%= render partial: "apply_modal", locals: { program: program } %>
+
+  <ul>
+    <li>
+      <h4>
+        #<%= @program.ranking %>
+      </h4>
+      <strong>
+        Ranking
+      </strong>
+    </li>
+    <li>
+    <h4>
+        <%= @program.subject %>
+      </h4>
+      <strong>
+        Subject
+      </strong>
+    </li>
+    <li>
+    <h4>
+        <%= @program.tuition %>$
+    </h4>
+      <strong>
+        Tuition Fees
+      </strong>
+    </li>
+    <li>
+    <h4>
+        <%= @program.scholarship %>$
+    </h4>
+      <strong>
+        Scholarship Opportunities
+      </strong>
+    </li>
+  </ul>
+</div>
+
