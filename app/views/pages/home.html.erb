@@ -23,9 +23,10 @@
 
   <div class="banner-content" style="margin-bottom: 58px">
     <h1>Yooni</h1>
-    <h2>get matched with the best Universities</h2>
+
+    <h2 style="text-transform: capitalize; letter-spacing: 2px;">get matched with the best Universities</h2>
+
     <ul></ul>
-    <p>Search by school name, subject, level, and other keywords: </p>
 
 
 
@@ -36,12 +37,12 @@
 
       <% end  %>
     </div>
+    <p>Search by school name, subject, level, and other keywords: </p>
 
     <ul></ul>
     <ul></ul>
 
 
-    <p>not sure where to start?</p>
 
 
 
@@ -49,6 +50,7 @@
 
     <!-- Trigger the modal with a button -->
     <button type="button" id="modal-button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Get Matched</button>
+    <p>not sure where to start?</p>
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -212,7 +214,7 @@
 <%= javascript_tag do %>
 $(document).ready(function() {
 var handler = Gmaps.build('Google');
-handler.buildMap({ internal: { id: 'map' } }, function() {
+handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'} }, function() {
 markers = handler.addMarkers(<%= raw @hash.to_json %>);
 handler.bounds.extendWith(markers);
 handler.fitMapToBounds();

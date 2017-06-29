@@ -30,11 +30,14 @@
     font-family: inherit;
     font-size: 21px;
     padding: 28px;
+    width: 250px;
+    margin-top:12px;
 }
 
 #modal-button:hover {
   background-color: transparent;
   border: 1px solid rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in;
 }
 
 .header-color {
