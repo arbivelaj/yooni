@@ -7,9 +7,11 @@
 }
 
 .search-input-field {
-  width: 555px;
+  width: 620px;
   padding: 5px;
   border: none;
+  height: 35px;
+  background-color: rgba(253, 253, 253, 0.84);
 }
 
 .btn-search {
@@ -18,6 +20,8 @@
   padding: 5px;
   width: 67px;
   color: white;
+  height: 35px;
+
 }
 
 .btn-search:hover {
@@ -33,7 +37,8 @@
   h1 {
     flex: 0 0 30%;
     color: grey;
-    font-family: "Raleway"
+    font-family: "Raleway";
+    letter-spacing: 1px;
   }
   span {
     flex: 0 0 30%;
