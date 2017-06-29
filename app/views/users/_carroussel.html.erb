@@ -1,3 +1,52 @@
+<style>
+.cardF {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+}
+.card-userF {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.card-categoryF {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.card-descriptionF {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-descriptionF h2 {
+  font-size: 24px;
+}
+.card-descriptionF p {
+  font-size: 13px;
+}
+.card-linkF {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-linkF:hover {
+  opacity: 0.1;
+}
+
+
+
+</style>
+
 <div id="myCarousel<%= number %>" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -44,3 +93,18 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<!-- card first trial -->
+<% favourites.each_with_index do |favourite, index| %>
+<div class="cardF" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path favourite.university.photos.first.path %>'); margin-bottom: 20px;">
+  <div class="card-categoryF">You saved the program <b><%= favourite.title %></b></div>
+  <div class="card-descriptionF">
+    <h2><b>At </b><%= favourite.university.name %></h2>
+    <p><b>Address: </b><%= favourite.university.location %></p>
+    <p><b>On </b><%= favourite.created_at%></p>
+
+  </div>
+  <img class="card-user avatarF" src="user.jpg">
+  <a class="card-linkF" href="#" ></a>
+</div>
+<% end %>
