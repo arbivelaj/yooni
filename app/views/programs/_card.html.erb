@@ -5,13 +5,13 @@
       background-image: linear-gradient(rgba(38,39,38,0.3) 100%, rgba(38,39,38,0.18) 100%)!important;
     }
   </style> -->
-    <div class="card-program card-search m-button" style="background-image:linear-gradient(rgba(26,39,38,0.2) 11%, rgba(-5,18,38,71.18) 100%),  url('<%= cl_image_path program.university.photos.first.path, height: 300, width: 400, crop: :mfit, gravity: :center; %>')">
+    <div class="card-program card-search m-button" style="background-image:linear-gradient(rgba(26,39,38,0.6) 11%, rgba(-5,18,38,71.18) 100%),  url('<%= cl_image_path program.university.photos.first.path, height: 300, width: 400, crop: :mfit, gravity: :center; %>')">
 
 
 
       <%= link_to program_path(program), class: "card-search-link" do%>
         <div class="card-background">
-            <p class="text-search" style="font-size: 19px"><strong><%= program.university.name %></strong></p>
+            <p class="text-search" style="font-size: 19px; padding-top: 20px;"><strong><%= program.university.name %></strong></p>
             <h3 class="text-center letter-spacing" style="margin-top: 0px";><%= program.title  %></h3>
             <p class="text-search"> <%= program.university.location %></p>
         </div>
