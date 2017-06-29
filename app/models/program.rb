@@ -5,7 +5,6 @@ class Program < ApplicationRecord
   has_many :applications , dependent: :destroy
   has_many :reviews, dependent: :destroy
 
-
   class << self
     def search(query)
       if query.is_a? String

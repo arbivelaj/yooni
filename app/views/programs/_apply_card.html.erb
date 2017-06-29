@@ -1,7 +1,12 @@
 <div class="apply-card">
+<% if params[:notice] %>
+  <h4>
+    Already applied
+  </h4>
+  <% else %>
   <button data-toggle="modal" class="btn btn-apply" data-target="#apply">Apply</button>
   <%= render partial: "apply_modal", locals: { program: program } %>
-
+<% end %>
   <ul>
     <li>
       <h4>
