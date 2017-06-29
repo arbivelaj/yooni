@@ -121,6 +121,18 @@ amsterdam = University.create(
               "http://res.cloudinary.com/dbk82xjri/image/upload/v1498207841/uni_of_amsterdam_t7mucn.jpg",
               "http://res.cloudinary.com/dbk82xjri/image/upload/v1498209975/university-study-group_4460x4460_uej8hx.jpg"])
 
+rome = University.create(
+  name: "University of Rome",
+  location: "Piazzale Aldo Moro 5, 00185 Roma, Italy",
+  description: "With over 700 years of history, 111,000 students, 4000 teachers and 2000 employees, technicians and librarians, in addition to 2000 administrative staff in university hospitals, Sapienza is the first university in Europe.",
+  website: "http://en.uniroma1.it/",
+  phone_number: "+390649911",
+  contact: "hello@univroma1.it",
+  latitude: 41.903220,
+  longitude: 12.515131,
+  photo_urls: ["http://res.cloudinary.com/dbk82xjri/image/upload/v1498752241/unirome_mevuxa.jpg",
+              "http://res.cloudinary.com/dbk82xjri/image/upload/v1498752264/ROMA_mckvw6.jpg",
+              "http://res.cloudinary.com/dbk82xjri/image/upload/v1498209975/university-study-group_4460x4460_uej8hx.jpg"])
 
 
 #================================
@@ -360,3 +372,36 @@ engineering4 = Program.create(
   level: "Bachelor",
   university: imperial,
   subject: "Engineering")
+
+fashion = Program.create(
+  title: "Fashion Management",
+  ranking: 85,
+  tuition: 2900,
+  scholarship: 1090,
+  level: "Master",
+  university: rome,
+  subject: "Management")
+
+product = Program.create(
+  title: "Product Design Management",
+  ranking: 85,
+  tuition: 2900,
+  scholarship: 1090,
+  level: "Master",
+  university: rome,
+  subject: "Management")
+
+innovation2 = Program.create(
+  title: "Management and Innovation",
+  ranking: 85,
+  tuition: 2900,
+  scholarship: 1090,
+  level: "Master",
+  university: rome,
+  subject: "Management")
+
+
+
+
+
+
