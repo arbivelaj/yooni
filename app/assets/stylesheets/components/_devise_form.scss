@@ -1,0 +1,33 @@
+.session-new, .registration-new {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  form {
+    h2 {
+      color: #504d4d;
+    }
+    background-color: white;
+    padding: 24px 60px;
+    border-radius: 4px;
+    color: gray;
+    box-shadow: 2px 2px 2px rgba(1,1,1,0.3);
+    margin-top: 40px;
+  }
+  .shared-links {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+}
+.facebook-button {
+  background-color: #3b5998;
+  padding: 10px;
+  border-radius: 2px;
+  color: white;
+  display: block;
+}

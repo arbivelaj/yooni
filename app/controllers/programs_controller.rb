@@ -6,10 +6,6 @@ class ProgramsController < ApplicationController
     @review = Review.new
 
     if current_user
-      if params[:flash]
-        favourite = Favourite.create(user: current_user, program_id: params[:id])
-      end
-
       if params[:notice]
         application = Application.create(user: current_user, program_id: params[:id])
       end

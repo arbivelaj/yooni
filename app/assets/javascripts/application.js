@@ -18,3 +18,5 @@ setInterval(function(){
   var item = items[Math.floor(Math.random()*items.length)];
   $("#search-field").attr("placeholder", item);
 }, 2000);
+
+$(".alert" ).fadeOut(3000);
